@@ -2,7 +2,7 @@
 baseurl = "https://www.example.com"
 languageCode = "en-us"
 title = "Highlights"
-theme = "hugo-highlights-theme"
+theme = "hugo-wd-theme"
 
 # Enter your tracking code to enable Google analytics
 googleAnalytics = ""
@@ -23,14 +23,14 @@ googleAnalytics = ""
   # www.formspree.io as a proxy. The form makes a Post request to their servers to send an email
   # Visitors can send up to a 1000 emails each month
   #
-  # How to setup formspree
+  # How to setup Simple Form
   #
-  # - set your email address under 'email' below
+  # - create an api at getsimpleform.com
+  # - add your api under 'form_api' below
   # - upload the generated site to your server
-  # - send a dummy email to yourself to confirm your account
-  # - click the confirmation link in the email from www.formspree.io
+  # - send a dummy email to yourself to confirm that you recieve the form data
   # - That's all. Enjoy mailing!
-  email = "your@mail.com"
+  form_api = ""
 
   # If this param is set to true, every section gets an own background image (located at static/images)
   # to change the image you could use the param picture on every section.
