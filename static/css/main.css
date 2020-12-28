@@ -1511,8 +1511,8 @@ select,
 textarea {
 	color: #6f7577;
 	font-family: "Merriweather Sans",
-	"Helvetica",
-	sans-serif;
+		"Helvetica",
+		sans-serif;
 	font-size: 15pt;
 	font-weight: 300;
 	line-height: 1.75em;
@@ -2952,6 +2952,7 @@ button:disabled,
 	font-size: 3em;
 	line-height: 1.25em;
 	margin: 0;
+	text-shadow: .1em .1em .2em #555;
 }
 
 #header header h1:after {
