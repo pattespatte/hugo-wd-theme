@@ -3141,11 +3141,11 @@ button:disabled,
 	/* Header */
 
 	#header {
-		height: 90vh;
+		height: 100vh;
 	}
 
 	#header:after {
-		height: 90vh;
+		height: 100vh;
 	}
 
 	#header header {
@@ -3161,7 +3161,14 @@ button:disabled,
 	}
 
 	#header .container {
-		display: none;
+		background: none;
+		color: #fff;
+		margin: auto;
+		left: inherit;
+	}
+
+	#header .actions a {
+		color: inherit;
 	}
 
 	/* Footer */
