@@ -2,7 +2,7 @@
 <section id="{{.block.id}}" class="main special">
 	<div class="container">
 		{{ if eq .params.backgroundpersection true }}
-		<span class="image fit primary"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/{{ with .block.picture }}{{ . }}{{ end }}" alt="{{ .block.title }}" /><noscript><img src="images/{{ with .block.picture }}{{ . }}{{ end }}" alt="{{ .block.title }}" /></noscript></span>
+		<span class="image fit primary"><img loading="lazy" src="images/{{ with .block.picture }}{{ . }}{{ end }}" alt="{{ .block.title }}"></span>
 		{{ end }}
 		<div class="content">
 			<header class="major">
