@@ -12,7 +12,7 @@
 			<form method="post" action="//getsimpleform.com/messages?form_api_token={{ with .params.form_api }}{{.}}{{ end }}">
 				<div class="row uniform">
 					<div class="6u 12u$(xsmall)"><label>{{ with .block.form.name }}{{ . }}{{ end }}<input type="text" name="name" id="name" placeholder="{{ with .block.form.name }}{{ . }}{{ end }}" /></label></div>
-                    <div class="6u$ 12u$(xsmall)"><label>{{ with .block.form.email }}{{ . }}{{ end }}<input type="email" name="email" id="email" placeholder="{{ with .block.form.email }}{{ . }}{{ end }}" /></label></div>
+					<div class="6u$ 12u$(xsmall)"><label>{{ with .block.form.email }}{{ . }}{{ end }}<input type="email" name="email" id="email" placeholder="{{ with .block.form.email }}{{ . }}{{ end }}" /></label></div>
 					<div class="12u$"><textarea name="message" id="message" placeholder="{{ with .block.form.message }}{{ . }}{{ end }}" rows="4"></textarea></div>
 					<div class="12u$">
 						<ul class="actions">
