@@ -3044,6 +3044,15 @@ button:disabled,
 	padding-left: 0;
 }
 
+/* LazyLoad */
+img[data-src] {
+	display: none;
+}
+
+img.lazy[data-src] {
+	display: block;
+}
+
 /* Large */
 
 @media screen and (max-width: 1680px) {
