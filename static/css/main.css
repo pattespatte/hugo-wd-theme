@@ -1558,7 +1558,7 @@ h5,
 h6 {
 	color: #555;
 	font-weight: 800;
-	letter-spacing: 0.075em;
+	letter-spacing: .05em;
 	line-height: 1em;
 	margin: 0 0 1em 0;
 	text-transform: uppercase;
