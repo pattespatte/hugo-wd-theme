@@ -1,8 +1,8 @@
 # Site settings
 baseurl = "https://www.example.com"
 languageCode = "en-us"
-title = "Highlights"
 theme = "hugo-wd-theme"
+title = "Highlights"
 
 # Enter your tracking code to enable Google analytics
 googleAnalytics = ""
@@ -20,8 +20,7 @@ googleAnalytics = ""
   description = "Your Description"
 
   # For a static site it's not possible to provide a contact form. The contact form uses
-  # www.formspree.io as a proxy. The form makes a Post request to their servers to send an email
-  # Visitors can send up to a 1000 emails each month
+  # Simple Form as a proxy. The form makes a Post request to their servers to send an email
   #
   # How to setup Simple Form
   #
