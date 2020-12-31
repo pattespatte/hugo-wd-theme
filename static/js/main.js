@@ -226,7 +226,12 @@
 
 	});
 
-	// Always load external inks in new tab
-	$('a[href^="//"], a[href^="http"]').not('a[href*="your-domain"]').attr('target', '_blank');
+	// Always load external links in new tab
+	$('a[href^="//"], a[href^="http"]')
+		.not('a[href*="' + location.hostname + '"]')
+		.attr({
+			target: "_blank",
+			rel: "noopener"
+		});
 
 })(jQuery);
