@@ -8,6 +8,7 @@ This theme provides the following features
 - contact form Simple Form (via getsimpleform.com)
 - Google Analytics
 - responsive
+- fast loading (use minified build for best result)
 
 ![Hugo WD Theme screenshot](https://raw.githubusercontent.com/pattespatte/hugo-wd-theme/master/images/screenshot.png)
 
@@ -81,7 +82,7 @@ Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your b
 
 ## Contributing
 
-Did you found a bug or got an idea for features? Feel free to use the [issue tracker](//github.com/pattespatte/hugo-wd-theme/issues) to let me know.
+Have you found a bug or got an idea for features? Feel free to use the [issue tracker](//github.com/pattespatte/hugo-wd-theme/issues) to let me know.
 
 ## License
 
