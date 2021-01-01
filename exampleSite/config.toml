@@ -31,10 +31,16 @@ googleAnalytics = ""
   # - That's all. Enjoy mailing!
   form_api = ""
 
-  # If this param is set to true, every section gets an own background image (located at static/images)
-  # to change the image you could use the param picture on every section.
+  # If this param is set to true, every section gets an own background image (located at static/images).
+  # To change the image you could use the param picture on every section.
   # If it's disabled you could change the background to overwrite the bg.jpg and overlay.png to set the background.
   backgroundpersection = true
+
+  # If you wish to use responsive images, that is the image parameter 'srcset', please set the following parameter to 'true'.
+  # If you turn on responsive images by setting 'srcset' to true you need 3 sizes of each image. Theses images can be created with the attached script - `static/images/resize-images-wd-theme.sh`.
+  # For normal images, just use image name like pic01.jpg and for responsive images you will use the first part of the filename (like 'pic01') and the images created by the script will be used accordingly.
+  # In this example the filenames would be: pic01-480w.jpg, pic01-736w.jpg, pic01-980w.jpg but you would still just put 'picture = pic01' below.
+  image_srcset = false
 
   # hero Section
   [params.hero]
