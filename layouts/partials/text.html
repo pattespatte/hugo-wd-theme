@@ -1,23 +1,16 @@
 {{ print "<!-- " .block.id " -->" | safeHTML }}
 <section id="{{.block.id}}" class="main special">
 	<div class="container">
-		{{ if eq .params.backgroundpersection true }}
-		<span class="image fit primary">
-			{{ if eq .params.image_srcset true }}
-				<img
+		{{ if eq .params.backgroundpersection true }}<span class="image fit primary">
+			{{ if eq .params.image_srcset true }}<img
 				src="images/{{ with .block.picture }}{{ . }}{{ end }}-480w.jpg"
-				srcset="images/{{ with .block.picture }}{{ . }}{{ end }}-480w.jpg 480w,
-				images/{{ with .block.picture }}{{ . }}{{ end }}-736w.jpg 736w,
-				images/{{ with .block.picture }}{{ . }}{{ end }}-980w.jpg 980w"
+				srcset="images/{{ with .block.picture }}{{ . }}{{ end }}-480w.jpg 480w, images/{{ with .block.picture }}{{ . }}{{ end }}-736w.jpg 736w, images/{{ with .block.picture }}{{ . }}{{ end }}-980w.jpg 980w"
 				sizes="(min-width: 980px) 688px, 100vw"
 				alt="{{ .block.title }}"
 				loading="lazy"
 				>
-			{{ else }}
-				<img loading="lazy" src="images/{{ with .block.picture }}{{ . }}{{ end }}" alt="{{ .block.title }}">
-			{{ end }}
-		</span>
-		{{ end }}
+			{{ else }}<img loading="lazy" src="images/{{ with .block.picture }}{{ . }}{{ end }}" alt="{{ .block.title }}">{{ end }}
+		</span>{{ end }}
 		<div class="content">
 			<header class="major">
 				<h2>{{ with .block.title }}{{ . | markdownify }}{{ end }}</h2>
