@@ -2740,8 +2740,8 @@ button.special,
 	border: 0;
 	box-shadow: none;
 	color: #fff !important;
-	padding: .5em 1.5em;
-	line-height: 1em;
+	padding: 1.75em 2em;
+	line-height: .1em;
 }
 
 input[type="submit"].special:hover,
