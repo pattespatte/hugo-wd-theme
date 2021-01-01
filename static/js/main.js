@@ -4,6 +4,16 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+// Always load external links in new tab
+jQuery(function () {
+	$('a[href^="//"], a[href^="http"]').not('a[href*="' + location.hostname + '"]').attr({
+		target: "_blank",
+		rel: "noopener"
+	});
+	// The removal of 'is-loading' often fails in some browsers. Brute-force!
+	$('html').removeClass('is-loading');
+});
+
 (function ($) {
 
 	skel.breakpoints({
@@ -25,7 +35,7 @@
 		$window.on('load', function () {
 			window.setTimeout(function () {
 				$html.removeClass('is-loading');
-			}, 0);
+			}, 5);
 		});
 
 		// Touch mode.
@@ -225,18 +235,6 @@
 		});
 
 	});
-
-	// Always load external links in new tab
-	jQuery(document).ready(function () {
-		add_target_blank_to_external_links();
-	});
-
-	function add_target_blank_to_external_links() {
-		$('a[href^="//"], a[href^="http"]').not('a[href*="' + location.hostname + '"]').attr({
-			target: "_blank",
-			rel: "noopener"
-		});
-	}
 
 })(jQuery);
 
