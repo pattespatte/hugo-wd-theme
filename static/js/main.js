@@ -4,7 +4,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-(function($) {
+(function ($) {
 
 	skel.breakpoints({
 		large: '(max-width: 1680px)',
@@ -13,7 +13,7 @@
 		xsmall: '(max-width: 480px)'
 	});
 
-	$(function() {
+	$(function () {
 
 		var $window = $(window),
 			$body = $('body'),
@@ -22,8 +22,8 @@
 		// Disable animations/transitions until the page has loaded.
 		$html.addClass('is-loading');
 
-		$window.on('load', function() {
-			window.setTimeout(function() {
+		$window.on('load', function () {
+			window.setTimeout(function () {
 				$html.removeClass('is-loading');
 			}, 0);
 		});
@@ -44,12 +44,12 @@
 				.css('padding-bottom', 25);
 
 			// Pass scroll event to window.
-			$wrapper.on('scroll', function() {
+			$wrapper.on('scroll', function () {
 				$window.trigger('scroll');
 			});
 
 			// Scrolly.
-			$window.on('load.hl_scrolly', function() {
+			$window.on('load.hl_scrolly', function () {
 
 				$('.scrolly').scrolly({
 					speed: 1500,
@@ -77,7 +77,7 @@
 		$('form').placeholder();
 
 		// Prioritize "important" elements on medium.
-		skel.on('+medium -medium', function() {
+		skel.on('+medium -medium', function () {
 			$.prioritize(
 				'.important\\28 medium\\29',
 				skel.breakpoint('medium').active
@@ -92,9 +92,9 @@
 		// Make title fixed.
 		if (!skel.vars.mobile) {
 
-			$window.on('load.hl_headerTitle', function() {
+			$window.on('load.hl_headerTitle', function () {
 
-				skel.on('-medium !medium', function() {
+				skel.on('-medium !medium', function () {
 
 					$headerTitle
 						.css('position', 'fixed')
@@ -106,7 +106,7 @@
 
 				});
 
-				skel.on('+medium', function() {
+				skel.on('+medium', function () {
 
 					$headerTitle
 						.css('position', '')
@@ -125,14 +125,14 @@
 		}
 
 		// Scrollex.
-		skel.on('-small !small', function() {
+		skel.on('-small !small', function () {
 			$header.scrollex({
-				terminate: function() {
+				terminate: function () {
 
 					$headerTitle.css('opacity', '');
 
 				},
-				scroll: function(progress) {
+				scroll: function (progress) {
 
 					// Fade out title as user scrolls down.
 					if (progress > 0.5)
@@ -146,14 +146,14 @@
 			});
 		});
 
-		skel.on('+small', function() {
+		skel.on('+small', function () {
 
 			$header.unscrollex();
 
 		});
 
 		// Main sections.
-		$('.main').each(function() {
+		$('.main').each(function () {
 
 			var $this = $(this),
 				$primaryImg = $this.find('.image.primary > img'),
@@ -192,13 +192,13 @@
 
 			if (skel.canUse('transition')) {
 
-				options.init = function() {
+				options.init = function () {
 					$bg.removeClass('active');
 				};
-				options.enter = function() {
+				options.enter = function () {
 					$bg.addClass('active');
 				};
-				options.leave = function() {
+				options.leave = function () {
 					$bg.removeClass('active');
 				};
 
@@ -208,13 +208,13 @@
 					.css('opacity', 1)
 					.hide();
 
-				options.init = function() {
+				options.init = function () {
 					$bg.fadeOut(0);
 				};
-				options.enter = function() {
+				options.enter = function () {
 					$bg.fadeIn(400);
 				};
-				options.leave = function() {
+				options.leave = function () {
 					$bg.fadeOut(400);
 				};
 
@@ -227,11 +227,19 @@
 	});
 
 	// Always load external links in new tab
-	$('a[href^="//"], a[href^="http"]')
-		.not('a[href*="' + location.hostname + '"]')
-		.attr({
+	jQuery(document).ready(function () {
+		add_target_blank_to_external_links();
+	});
+
+	function add_target_blank_to_external_links() {
+		$('a[href^="//"], a[href^="http"]').not('a[href*="' + location.hostname + '"]').attr({
 			target: "_blank",
 			rel: "noopener"
 		});
+	}
 
 })(jQuery);
+
+// if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+// 	alert('mobile');
+// }
