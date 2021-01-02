@@ -162,21 +162,25 @@ body {
 	margin-right: auto;
 }
 
-.container.\31 25\25 { /* .container[class ~= "125%"] */
+.container.\31 25\25 {
+	/* .container[class ~= "125%"] */
 	width: 100%;
 	max-width: 43.75em;
 	min-width: 35em;
 }
 
-.container.\37 5\25 { /* .container[class ~= "75%"] */
+.container.\37 5\25 {
+	/* .container[class ~= "75%"] */
 	width: 26.25em;
 }
 
-.container.\35 0\25 { /* .container[class ~= "50%"] */
+.container.\35 0\25 {
+	/* .container[class ~= "50%"] */
 	width: 17.5em;
 }
 
-.container.\32 5\25 { /* .container[class ~= "25%"] */
+.container.\32 5\25 {
+	/* .container[class ~= "25%"] */
 	width: 8.75em;
 }
 
@@ -2110,8 +2114,8 @@ header.major h6:after {
 	height: 2px;
 	margin: 0.75em auto 0 auto;
 	position: relative;
-    width: 4em;
-    border-radius: 1px;
+	width: 4em;
+	border-radius: 1px;
 }
 
 header.major p {
@@ -3090,11 +3094,16 @@ button:disabled,
 	#header header {
 		padding-bottom: 9em;
 		width: 80%;
+		margin-bottom: 10vh;
 	}
 
 	#header .container {
 		margin-left: -40%;
 		padding: 3em;
+	}
+
+	#header .container> :last-child {
+		margin-bottom: 10vh;
 	}
 
 	/* Footer */
