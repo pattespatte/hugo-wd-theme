@@ -4,11 +4,10 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-// The removal of 'is-loading' often fails in some browsers. Brute-force!
-var loading_html = document.querySelector("html");
-window.setTimeout(function() {
-	loading_html.classList.remove("is-loading");
-}, 500);
+// $(window).width(); // returns width of browser viewport
+// $(document).width(); // returns width of HTML document
+// $(window).height(); // returns height of browser viewport
+// $(document).height(); // returns height of HTML document
 
 // Always load external links in new tab
 jQuery(function() {
@@ -16,6 +15,13 @@ jQuery(function() {
 		target: "_blank",
 		rel: "noopener"
 	});
+
+	// The removal of 'is-loading' often fails in some browsers. Brute-force!
+	var loading_html = document.querySelector("html");
+	window.setTimeout(function() {
+		loading_html.classList.remove("is-loading");
+	}, 500);
+
 });
 
 (function($) {
