@@ -2966,7 +2966,7 @@ button:disabled,
 }
 
 #header .container {
-	background: rgba(255, 255, 255, 0.95);
+	background: rgba(255, 255, 255, 0.85);
 	bottom: 0;
 	left: 50%;
 	margin-left: -17.5em;
@@ -3166,6 +3166,7 @@ button:disabled,
 		color: #fff;
 		margin: auto;
 		left: inherit;
+		width: 100vw;
 	}
 
 	#header .actions a {
