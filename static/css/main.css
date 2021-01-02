@@ -3102,10 +3102,6 @@ button:disabled,
 		padding: 3em;
 	}
 
-	#header .container> :last-child {
-		margin-bottom: 10vh;
-	}
-
 	/* Footer */
 
 	#footer {
@@ -3133,6 +3129,10 @@ button:disabled,
 
 	h2 {
 		font-size: 1.35em;
+	}
+
+	#header .container> :last-child {
+		margin-bottom: 10vh;
 	}
 
 	/* Main */
