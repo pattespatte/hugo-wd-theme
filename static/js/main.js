@@ -4,17 +4,21 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+// The removal of 'is-loading' often fails in some browsers. Brute-force!
+var loading_html = document.querySelector("html");
+window.setTimeout(function() {
+	loading_html.classList.remove("is-loading");
+}, 500);
+
 // Always load external links in new tab
-jQuery(function () {
+jQuery(function() {
 	$('a[href^="//"], a[href^="http"]').not('a[href*="' + location.hostname + '"]').attr({
 		target: "_blank",
 		rel: "noopener"
 	});
-	// The removal of 'is-loading' often fails in some browsers. Brute-force!
-	$('html').removeClass('is-loading');
 });
 
-(function ($) {
+(function($) {
 
 	skel.breakpoints({
 		large: '(max-width: 1680px)',
@@ -23,7 +27,7 @@ jQuery(function () {
 		xsmall: '(max-width: 480px)'
 	});
 
-	$(function () {
+	$(function() {
 
 		var $window = $(window),
 			$body = $('body'),
@@ -32,10 +36,8 @@ jQuery(function () {
 		// Disable animations/transitions until the page has loaded.
 		$html.addClass('is-loading');
 
-		$window.on('load', function () {
-			window.setTimeout(function () {
-				$html.removeClass('is-loading');
-			}, 5);
+		$window.on('load', function() {
+			$html.removeClass('is-loading');
 		});
 
 		// Touch mode.
@@ -54,12 +56,12 @@ jQuery(function () {
 				.css('padding-bottom', 25);
 
 			// Pass scroll event to window.
-			$wrapper.on('scroll', function () {
+			$wrapper.on('scroll', function() {
 				$window.trigger('scroll');
 			});
 
 			// Scrolly.
-			$window.on('load.hl_scrolly', function () {
+			$window.on('load.hl_scrolly', function() {
 
 				$('.scrolly').scrolly({
 					speed: 1500,
@@ -87,7 +89,7 @@ jQuery(function () {
 		$('form').placeholder();
 
 		// Prioritize "important" elements on medium.
-		skel.on('+medium -medium', function () {
+		skel.on('+medium -medium', function() {
 			$.prioritize(
 				'.important\\28 medium\\29',
 				skel.breakpoint('medium').active
@@ -102,9 +104,9 @@ jQuery(function () {
 		// Make title fixed.
 		if (!skel.vars.mobile) {
 
-			$window.on('load.hl_headerTitle', function () {
+			$window.on('load.hl_headerTitle', function() {
 
-				skel.on('-medium !medium', function () {
+				skel.on('-medium !medium', function() {
 
 					$headerTitle
 						.css('position', 'fixed')
@@ -116,7 +118,7 @@ jQuery(function () {
 
 				});
 
-				skel.on('+medium', function () {
+				skel.on('+medium', function() {
 
 					$headerTitle
 						.css('position', '')
@@ -135,14 +137,14 @@ jQuery(function () {
 		}
 
 		// Scrollex.
-		skel.on('-small !small', function () {
+		skel.on('-small !small', function() {
 			$header.scrollex({
-				terminate: function () {
+				terminate: function() {
 
 					$headerTitle.css('opacity', '');
 
 				},
-				scroll: function (progress) {
+				scroll: function(progress) {
 
 					// Fade out title as user scrolls down.
 					if (progress > 0.5)
@@ -156,14 +158,14 @@ jQuery(function () {
 			});
 		});
 
-		skel.on('+small', function () {
+		skel.on('+small', function() {
 
 			$header.unscrollex();
 
 		});
 
 		// Main sections.
-		$('.main').each(function () {
+		$('.main').each(function() {
 
 			var $this = $(this),
 				$primaryImg = $this.find('.image.primary > img'),
@@ -202,13 +204,13 @@ jQuery(function () {
 
 			if (skel.canUse('transition')) {
 
-				options.init = function () {
+				options.init = function() {
 					$bg.removeClass('active');
 				};
-				options.enter = function () {
+				options.enter = function() {
 					$bg.addClass('active');
 				};
-				options.leave = function () {
+				options.leave = function() {
 					$bg.removeClass('active');
 				};
 
@@ -218,13 +220,13 @@ jQuery(function () {
 					.css('opacity', 1)
 					.hide();
 
-				options.init = function () {
+				options.init = function() {
 					$bg.fadeOut(0);
 				};
-				options.enter = function () {
+				options.enter = function() {
 					$bg.fadeIn(400);
 				};
-				options.leave = function () {
+				options.leave = function() {
 					$bg.fadeOut(400);
 				};
 
