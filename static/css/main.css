@@ -852,7 +852,7 @@ header.major p {
 /* Form */
 
 label {
-	color: #555;
+	color: #6f7577;
 	display: block;
 	font-size: 0.9em;
 	font-weight: 700;
@@ -1211,8 +1211,7 @@ button,
 	background-color: transparent;
 	border-radius: .5em;
 	border: 0;
-	box-shadow: inset 0 0 0 2px #ddd;
-	color: #555 !important;
+	color: #454d50 !important;
 	cursor: pointer;
 	display: inline-block;
 	font-weight: 700;
