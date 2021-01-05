@@ -12,23 +12,27 @@
 			{{ else }}<img loading="lazy" src="images/{{ with .block.picture }}{{ . }}{{ end }}" alt="{{ .block.title }}">{{ end }}
 		</span>{{ end }}
 		<div class="content">
-		<header class="major">
-			<h2>{{ with .block.title }}{{ . | markdownify }}{{ end }}</h2>
-		</header>
-		<p>{{ with .block.description }}{{ . | markdownify }}{{ end }}</p>
+			<header class="major">
+				<h2>{{ with .block.title }}{{ . | markdownify }}{{ end }}</h2>
+			</header>
+			<p>{{ with .block.description }}{{ . | markdownify }}{{ end }}</p>
 			<form method="post" action="//getsimpleform.com/messages?form_api_token={{ with .params.form_api }}{{.}}{{ end }}">
-				<div class="row uniform">
-					<div class="6u 12u$(xsmall)"><label>{{ with .block.form.name }}{{ . }}{{ end }}<input type="text" name="name" id="name" placeholder="{{ with .block.form.name }}{{ . }}{{ end }}" /></label></div>
-					<div class="6u$ 12u$(xsmall)"><label>{{ with .block.form.email }}{{ . }}{{ end }}<input type="email" name="email" id="email" placeholder="{{ with .block.form.email }}{{ . }}{{ end }}" /></label></div>
-					<div class="12u$"><textarea name="message" id="message" placeholder="{{ with .block.form.message }}{{ . }}{{ end }}" rows="4"></textarea></div>
-					<div class="12u$">
-						<ul class="actions">
-							<li><button type="submit" class="special">{{ with .block.form.buttontext }}{{ . }}{{ end }}</button></li>
-						</ul>
-					</div>
+				<div class="row">
+					<div class="col"><label for="name">{{ with .block.form.name }}{{ . }}{{ end }}</label><input class="form-control" type="text" name="name" id="name" placeholder="{{ with .block.form.name }}{{ . }}{{ end }}" /></div>
+					<div class="col"><label for="email">{{ with .block.form.email }}{{ . }}{{ end }}</label><input class="form-control" type="email" name="email" id="email" placeholder="{{ with .block.form.email }}{{ . }}{{ end }}" /></div>
+				</div>
+				<div class="form-group">
+					<label for="message">Example textarea</label>
+					<textarea class="form-control" id="message" placeholder="{{ with .block.form.message }}{{ . }}{{ end }}" rows="4"></textarea>
+				</div>
+				<div class="form-group">
+					<ul class="actions">
+						<li><button type="submit" class="special">{{ with .block.form.buttontext }}{{ . }}{{ end }}</button></li>
+					</ul>
 				</div>
 			</form>
-		</div>
+
+			</div>
 		{{ if .next }}
 			<a href="#{{.next.id}}" class="goto-next scrolly" title="{{.next.title}}">{{ with .block.buttontext }}{{ . | markdownify }}{{ end }}</a>
 		{{ end }}
