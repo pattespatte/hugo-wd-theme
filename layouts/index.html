@@ -11,7 +11,7 @@
 </head>
 
 <body>
-	<div role="main">
+	<div role="main" id="wrapper">
 		{{ $list := .Site.Params.block }}
 		{{ partial "hero.html" (dict "block" .Site.Params.hero "params" $.Site.Params "next" (index $list 0)) }}
 		{{ range $index, $element := $list }}

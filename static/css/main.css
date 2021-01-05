@@ -856,7 +856,7 @@ label {
 	display: block;
 	font-size: 0.9em;
 	font-weight: 700;
-	margin:  1em 0 0;
+	margin: 1em 0 0;
 }
 
 /* Box */
@@ -1465,23 +1465,24 @@ button:disabled,
 /* Header */
 
 #header {
-	height: 100vh;
+	margin: 7vh 0 -7vh;
 	position: relative;
 	text-align: center;
+	height: 100%;
+	width: 100%;
 }
 
 #header:after {
 	content: '';
 	display: inline-block;
-	height: 100vh;
 	vertical-align: middle;
 }
 
 #header header {
 	color: rgba(255, 255, 255, 0.5);
 	display: inline-block;
-	padding-bottom: 8em;
 	vertical-align: middle;
+	height: 60vh;
 }
 
 #header header h1,
@@ -1522,11 +1523,8 @@ button:disabled,
 
 #header .container {
 	background: rgba(255, 255, 255, 0.85);
-	bottom: 0;
-	left: 50%;
-	margin-left: -17.5em;
 	padding: 2.5em;
-	position: absolute;
+	position: relative;
 }
 
 #header .container> :last-child {
@@ -1642,13 +1640,10 @@ button:disabled,
 	/* Header */
 
 	#header header {
-		padding-bottom: 9em;
 		width: 80%;
-		margin-bottom: 10vh;
 	}
 
 	#header .container {
-		margin-left: -40%;
 		padding: 3em;
 	}
 
@@ -1725,7 +1720,6 @@ button:disabled,
 		background: none;
 		color: #fff;
 		margin: auto;
-		left: inherit;
 		width: 100vw;
 	}
 

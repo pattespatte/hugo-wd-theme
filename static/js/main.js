@@ -45,9 +45,9 @@ $(function() {
 		speed: 1500
 	});
 
-	// Create wrapper.
-	$body.wrapInner('<div id="wrapper" />');
-	$wrapper = $('#wrapper');
+	// // Create wrapper.
+	// $body.wrapInner('<div id="wrapper" />');
+	// $wrapper = $('#wrapper');
 
 	// Header.
 	var $header = $('#header'),
