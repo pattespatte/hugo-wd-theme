@@ -146,7 +146,17 @@ table {
 /* Twitter Bootstrap overrides */
 
 body {
-	background: 0 0 ;
+	background: 0 0;
+}
+
+/* Box Model */
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* Containers */
@@ -205,10 +215,22 @@ html {
 }
 
 /* Fix background image on Apple devices */
+
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
-	html {
-		background-image: url(images/bg.jpg);
+
+	html,
+	body {
+		width: 100%;
+		height: 100%;
+		background-attachment: scroll;
+		background-repeat: repeat;
+		background-size: cover;
+	}
+
+	.main-bg {
+		background-size: cover;
+		width: 100vw;
 	}
 }
 
@@ -1399,6 +1421,7 @@ button:disabled,
 
 .main-bg.active {
 	opacity: 1;
+	background-attachment: scroll;
 }
 
 /* Main */
