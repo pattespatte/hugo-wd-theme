@@ -379,7 +379,7 @@ hr.major {
 blockquote {
 	border-left: solid 6px #ddd;
 	font-style: italic;
-	margin: 0 0 2em 0;
+	margin: 0 0 2em;
 	padding: 0.5em 0 0.5em 1.5em;
 }
 
@@ -732,7 +732,7 @@ body:before {
 	-webkit-font-smoothing: antialiased;
 	font-family: "Font Awesome 5 Free";
 	font-style: normal;
-	font-weight: normal;
+	font-weight: 300;
 	text-transform: none !important;
 }
 
@@ -859,7 +859,7 @@ header.major h6:after {
 	content: '';
 	display: block;
 	height: 2px;
-	margin: 0.75em auto 0 auto;
+	margin: 0.75em auto 0;
 	position: relative;
 	width: 4em;
 	border-radius: 1px;
@@ -918,7 +918,7 @@ label {
 
 .icon.major {
 	display: block;
-	margin: 0 0 1em 0;
+	margin: 0 0 1em;
 }
 
 .icon.major:before {
@@ -972,7 +972,7 @@ label {
 
 .image.fit {
 	display: block;
-	margin: 0 0 2em 0;
+	margin: 0 0 2em;
 	width: 100%;
 }
 
@@ -984,7 +984,7 @@ label {
 
 ol {
 	list-style: decimal;
-	margin: 0 0 2em 0;
+	margin: 0 0 2em;
 	padding-left: 1.25em;
 }
 
@@ -994,7 +994,7 @@ ol li {
 
 ul {
 	list-style: disc;
-	margin: 0 0 2em 0;
+	margin: 0 0 2em;
 	padding-left: 1em;
 }
 
@@ -1107,7 +1107,7 @@ ul.actions.vertical li>* {
 }
 
 ul.actions.vertical.small li {
-	padding: 0.5em 0 0 0;
+	padding: 0.5em 0 0;
 }
 
 ul.actions.vertical.small li:first-child {
@@ -1142,7 +1142,7 @@ ul.actions.fit.small li {
 }
 
 dl {
-	margin: 0 0 2em 0;
+	margin: 0 0 2em;
 }
 
 /* Table */
@@ -1153,7 +1153,7 @@ dl {
 }
 
 table {
-	margin: 0 0 2em 0;
+	margin: 0 0 2em;
 	width: 100%;
 }
 
@@ -1435,7 +1435,7 @@ button:disabled,
 }
 
 .main .container {
-	padding: 5em 2.5em 8em 2.5em;
+	padding: 5em 2.5em 8em;
 	background: rgba(255, 255, 255, 0.95);
 	box-shadow: inset 0 1px 0 0 #ddd;
 }
@@ -1486,7 +1486,7 @@ button:disabled,
 /* Header */
 
 #header {
-	margin: 7vh 0 -7vh;
+	margin: 10vh 0 0;
 	position: relative;
 	text-align: center;
 	height: 100%;
@@ -1560,13 +1560,13 @@ button:disabled,
 
 #footer {
 	min-height: 100vh;
-	padding: 0 0 12em 0;
+	padding: 0 0 12em;
 	position: relative;
 	text-align: center;
 }
 
 #footer .container {
-	padding: 5em 2.5em 3em 2.5em;
+	padding: 5em 2.5em 3em;
 	background: rgba(255, 255, 255, 0.95);
 	box-shadow: inset 0 1px 0 0 #ddd;
 }
@@ -1647,11 +1647,11 @@ button:disabled,
 
 	.main .image.primary {
 		display: block;
-		margin: 0 0 4em 0;
+		margin: 0 0 4em;
 	}
 
 	.main .container {
-		padding: 3em 3em 8em 3em;
+		padding: 3em 3em 8em;
 	}
 
 	.main .container:before {
@@ -1704,11 +1704,11 @@ button:disabled,
 	/* Main */
 
 	.main .container {
-		padding: 3em 1.5em 1em 1.5em;
+		padding: 3em 1.5em 1em;
 	}
 
 	.main .container .image.primary:first-child {
-		margin: -1.5em 0 2.5em 0;
+		margin: -1.5em 0 2.5em;
 	}
 
 	.main .goto-next {
@@ -1718,11 +1718,11 @@ button:disabled,
 	/* Header */
 
 	#header {
-		height: 100vh;
+		height: 90vh;
 	}
 
 	#header:after {
-		height: 100vh;
+		height: 70vh;
 	}
 
 	#header header {
@@ -1751,7 +1751,7 @@ button:disabled,
 	/* Footer */
 
 	#footer .container {
-		padding: 3em 1.5em 1em 1.5em;
+		padding: 3em 1.5em 1em;
 	}
 
 }
@@ -1770,12 +1770,12 @@ button:disabled,
 	/* List */
 
 	ul.actions {
-		margin: 0 0 2em 0;
+		margin: 0 0 2em;
 	}
 
 	ul.actions li {
 		display: block;
-		padding: 1em 0 0 0;
+		padding: 1em 0 0;
 		text-align: center;
 		width: 100%;
 	}
@@ -1790,7 +1790,7 @@ button:disabled,
 	}
 
 	ul.actions.small li {
-		padding: 0.5em 0 0 0;
+		padding: .5em 0 0;
 	}
 
 	ul.actions.small li:first-child {
@@ -1800,15 +1800,15 @@ button:disabled,
 	ul.icons-grid li {
 		box-shadow: inset 0 1px 0 0 #ddd !important;
 		float: none;
-		margin: 2em 0 0 0;
-		padding: 2em 0 0 0;
+		margin: 2em 0 0;
+		padding: 2em 0 0;
 		width: 100%;
 	}
 
 	ul.icons-grid li:first-child {
 		box-shadow: none !important;
 		margin-top: 0;
-		padding: 1em 0 0 0;
+		padding: 1em 0 0;
 	}
 
 	ul.icons-grid li:nth-child(2n + 1) {
@@ -1840,17 +1840,17 @@ button:disabled,
 	/* Main */
 
 	.main .container {
-		padding: 3em 1em 1em 1em;
+		padding: 3em 1em 1em;
 	}
 
 	.main .container .image.primary:first-child {
-		margin: -2em 0 2.5em 0;
+		margin: -2em 0 2.5em;
 	}
 
 	/* Footer */
 
 	#footer .container {
-		padding: 3em 1em 1em 1em;
+		padding: 3em 1em 1em;
 	}
 
 	#footer footer .copyright {
