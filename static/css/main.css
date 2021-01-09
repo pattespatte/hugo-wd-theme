@@ -1441,7 +1441,7 @@ button:disabled,
 }
 
 .main .container:before {
-	min-height: calc(100vh - 13em);
+	/* min-height: calc(100vh - 13em); */
 	content: '';
 	display: inline-block;
 	vertical-align: middle;
@@ -1486,7 +1486,7 @@ button:disabled,
 /* Header */
 
 #header {
-	margin: 10vh 0 0;
+	margin: 10vh 0 -1.75em;
 	position: relative;
 	text-align: center;
 	height: 100%;
