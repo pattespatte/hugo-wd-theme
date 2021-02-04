@@ -1059,7 +1059,9 @@ ul.icons-grid li {
 }
 
 ul.icons-grid li h3 {
+	font-size: 1rem;
 	margin: 0;
+
 }
 
 ul.icons-grid li:nth-child(2n + 1) {
@@ -1495,10 +1497,10 @@ button:disabled,
 /* Header */
 
 #header {
-	margin: 10vh 0 -1.75em;
+	margin: 20vh 0 -20vh;
 	position: relative;
 	text-align: center;
-	height: 100%;
+	height: 100vh;
 	width: 100%;
 }
 
@@ -1508,7 +1510,7 @@ button:disabled,
 	vertical-align: middle;
 }
 
-#header header {
+#header>header {
 	color: rgba(255, 255, 255, 0.5);
 	display: inline-block;
 	vertical-align: middle;
