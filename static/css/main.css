@@ -1517,53 +1517,53 @@ button:disabled,
 	height: 60vh;
 }
 
-#header header h1,
-#header header h2,
-#header header h3,
-#header header h4,
-#header header h5,
-#header header h6,
-#header header strong,
-#header header b {
+#header>header h1,
+#header>header h2,
+#header>header h3,
+#header>header h4,
+#header>header h5,
+#header>header h6,
+#header>header strong,
+#header>header b {
 	color: #fff;
 }
 
-#header header a {
+#header>header a {
 	color: inherit;
 }
 
-#header header a:hover {
+#header>header a:hover {
 	color: #fff !important;
 }
 
-#header header h1 {
+#header>header h1 {
 	font-size: 3em;
 	line-height: 1.25em;
 	margin: 0;
 	text-shadow: .1em .1em .2em #555;
 }
 
-#header header h1:after {
+#header>header h1:after {
 	margin-top: 0.5em;
 }
 
-#header header p {
+#header>header p {
 	color: #fff;
 	font-weight: 700;
 	margin: 1.5em 0 0 0;
 }
 
-#header .container {
+#header>.container {
 	background: rgba(255, 255, 255, 0.85);
 	padding: 2.5em;
 	position: relative;
 }
 
-#header .container> :last-child {
+#header>.container> :last-child {
 	margin-bottom: 0;
 }
 
-#header .container .button {
+#header>.container .button {
 	min-width: 12em;
 }
 
@@ -1582,7 +1582,7 @@ button:disabled,
 	box-shadow: inset 0 1px 0 0 #ddd;
 }
 
-#footer footer {
+#footer>footer {
 	bottom: 2em;
 	color: rgba(255, 255, 255, 0.5);
 	left: 0;
@@ -1591,39 +1591,40 @@ button:disabled,
 	width: 100%;
 }
 
-#footer footer h1,
-#footer footer h2,
-#footer footer h3,
-#footer footer h4,
-#footer footer h5,
-#footer footer h6,
-#footer footer strong,
-#footer footer b {
+#footer>footer h1,
+#footer>footer h2,
+#footer>footer h3,
+#footer>footer h4,
+#footer>footer h5,
+#footer>footer h6,
+#footer>footer strong,
+#footer>footer b {
 	color: #fff;
 }
 
-#footer footer a {
+#footer>footer a {
 	color: inherit;
 }
 
-#footer footer a:hover {
+#footer>footer a:hover {
 	color: #fff !important;
 }
 
-#footer footer .copyright {
+#footer>footer>.copyright {
+	text-shadow: .1em .1em .2em #555;
 	font-size: 0.8em;
 	line-height: 1em;
 	padding: 0;
 }
 
-#footer footer .copyright li {
+#footer>footer>.copyright li {
 	border-left: solid 1px rgba(255, 255, 255, 0.2);
 	display: inline-block;
 	margin: 0 0 0 1em;
 	padding: 0 0 0 1em;
 }
 
-#footer footer .copyright li:first-child {
+#footer>footer>.copyright li:first-child {
 	border-left: 0;
 	margin-left: 0;
 	padding-left: 0;
@@ -1671,11 +1672,11 @@ button:disabled,
 
 	/* Header */
 
-	#header header {
+	#header>header {
 		width: 80%;
 	}
 
-	#header .container {
+	#header>.container {
 		padding: 3em;
 	}
 
@@ -1690,7 +1691,7 @@ button:disabled,
 		padding: 3em 3em 1em 3em;
 	}
 
-	#footer footer {
+	#footer>footer {
 		padding: 3em 3em 1em 3em;
 		bottom: auto;
 		position: relative;
@@ -1708,7 +1709,11 @@ button:disabled,
 		font-size: 1.35em;
 	}
 
-	#header .container> :last-child {
+	#header>.container {
+		padding: 0;
+	}
+
+	#header>.container> :last-child {
 		margin-bottom: 10vh;
 	}
 
@@ -1736,19 +1741,19 @@ button:disabled,
 		height: 70vh;
 	}
 
-	#header header {
+	#header>header {
 		padding-bottom: 0;
 	}
 
-	#header header h1 {
+	#header>header h1 {
 		font-size: 2em;
 	}
 
-	#header header p {
+	#header>header p {
 		margin-top: 1em;
 	}
 
-	#header .container {
+	#header>.container {
 		background: none;
 		color: #fff;
 		margin: auto;
@@ -1864,11 +1869,11 @@ button:disabled,
 		padding: 3em 1em 1em;
 	}
 
-	#footer footer .copyright {
+	#footer>footer>.copyright {
 		line-height: inherit;
 	}
 
-	#footer footer .copyright li {
+	#footer>footer>.copyright li {
 		border-left: 0;
 		display: block;
 		margin: 0;
