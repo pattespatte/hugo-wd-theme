@@ -1515,6 +1515,7 @@ button:disabled,
 	display: inline-block;
 	vertical-align: middle;
 	height: 60vh;
+	padding: 5vh;
 }
 
 #header>header h1,
