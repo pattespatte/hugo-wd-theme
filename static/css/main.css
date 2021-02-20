@@ -1496,7 +1496,7 @@ button:disabled,
 /* Header */
 
 #header {
-	margin: 20vh 0 -20vh;
+	margin: 20vh auto -20vh;
 	position: relative;
 	text-align: center;
 	height: 100vh;
@@ -1506,8 +1506,12 @@ button:disabled,
 #header>header {
 	color: rgba(255, 255, 255, 0.5);
 	display: inline-block;
-	height: 60vh;
+	left: 0;
 	padding: 5vh;
+	position: fixed;
+	top: 25vh;
+	margin: auto 10%;
+	width: 80%;
 }
 
 #header>header h1,
@@ -1548,8 +1552,9 @@ button:disabled,
 
 #header>.container {
 	background: rgba(255, 255, 255, 0.85);
-	padding: 2.5em;
-	position: relative;
+	padding: 3em;
+    position: relative;
+    bottom: -60vh;
 }
 
 #header>.container> :last-child {
@@ -1666,11 +1671,8 @@ button:disabled,
 	/* Header */
 
 	#header>header {
+		margin: auto 10%;
 		width: 80%;
-	}
-
-	#header>.container {
-		padding: 3em;
 	}
 
 	/* Footer */
