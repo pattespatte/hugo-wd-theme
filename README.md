@@ -12,6 +12,11 @@ This theme provides the following features
 
 ![Hugo WD Theme screenshot](https://raw.githubusercontent.com/pattespatte/hugo-wd-theme/master/images/screenshot.png)
 
+Expect great performance if you use the optimization script for images -- static/images/resize-images-wd-theme.sh
+
+Performance test from https://web.dev/measure/
+
+![PageSpeed on wastlund.net](images/web-dev--wastlund-net--2021-03-02--20-29-13.png)
 ## Installation
 
 Inside the folder of your Hugo site run:
