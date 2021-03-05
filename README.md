@@ -2,7 +2,7 @@
 
 This theme is very much based on the theme Highlights. It is a simple one page site originally created by [HTML5UP](http://html5up.net). My addition is mostly accessibility and changing form provider to a totally free service.
 
-All the information for creating the site is stored at the [config.toml](https://raw.githubusercontent.com/pattespatte/hugo-wd-theme/master/exampleSite/config.toml).
+All the information for creating the site is stored at the [config.toml](exampleSite/config.toml).
 This theme provides the following features
 
 - contact form Simple Form (via getsimpleform.com)
@@ -10,21 +10,21 @@ This theme provides the following features
 - responsive
 - fast loading (use minified build for best result)
 
-![Hugo WD Theme screenshot](https://raw.githubusercontent.com/pattespatte/hugo-wd-theme/master/images/screenshot.png)
+![Hugo WD Theme screenshot](images/screenshot.png)
 
-Expect great performance if you use the optimization script for images -- static/images/resize-images-wd-theme.sh
+Expect great performance if you use the optimization script for images -- [resize-images-wd-theme.sh](static/images/resize-images-wd-theme.sh)
 
 Performance test from https://web.dev/measure/
 
 ![PageSpeed on wastlund.net](images/web-dev--wastlund-net--2021-03-02--20-29-13.png)
+
 ## Installation
 
 Inside the folder of your Hugo site run:
 
-```bash
-$ cd themes
-$ git clone https://github.com/pattespatte/hugo-wd-theme
-```
+`$ cd themes`
+
+`$ git clone https://github.com/pattespatte/hugo-wd-theme`
 
 For more information read the official [setup guide](//gohugo.io/overview/installing/) of Hugo.
 
@@ -34,15 +34,15 @@ After installing the _Hugo WD Theme_ there are just a few more steps to get your
 
 ### The config file
 
-Take a look inside the [`exampleSite`](//github.com/pattespatte/hugo-wd-theme/tree/master/exampleSite) folder of this theme. You'll find a file called [`config.toml`](//github.com/pattespatte/hugo-wd-theme/tree/master/exampleSite/config.toml)
+Take a look inside the [`exampleSite`](exampleSite) folder of this theme. You'll find a file called [`config.toml`](exampleSite/config.toml)
 
 ### Change the background images
 
-It's possible to change the background files for every section (about, services, ... ). To do this you could set every image in the [`config.toml`](//github.com/pattespatte/hugo-wd-theme/tree/master/exampleSite/config.toml) of your site. The files are stored at `static/images/`.
+It's possible to change the background files for every section (about, services, ... ). To do this you could set every image in the [`config.toml`](exampleSite/config.toml) of your site. The files are stored at `static/images/`.
 
 ### Present your skills
 
-This section should show your capabilities and skills. You can change this content at `[params.services` in the [`config.toml`](//github.com/pattespatte/hugo-wd-theme/tree/master/exampleSite/config.toml).
+This section should show your capabilities and skills. You can change this content at `[[params.services]]` in the [`config.toml`](exampleSite/config.toml).
 
 All icons are part of Fontawesome's icon font. Look at the website of [Fontawesome](//fortawesome.github.io/Font-Awesome/icons/) for more icons. The icons are represented by their corresponding CSS class of Fontawesome.
 
@@ -72,7 +72,7 @@ A skill is defined like this example:
 Since this page will be static, you can use [getsimpleform.com](//getsimpleform.com/) as proxy to send the actual email. The service is free. Set it up by following the steps below:
 
 1. Create an api at [getsimpleform.com](//getsimpleform.com)
-2. Add your api under 'form_api' in the [`config.toml`](//github.com/pattespatte/hugo-wd-theme/tree/master/exampleSite/config.toml)
+2. Add your api under 'form_api' in the [`config.toml`](exampleSite/config.toml)
 3. Upload the generated site to your server
 4. Send a dummy email to yourself to confirm that you receive the form data
 5. That's all. Enjoy mailing!
