@@ -1496,7 +1496,6 @@ button:disabled,
 /* Header */
 
 #header {
-	margin: 20vh auto -20vh;
 	position: relative;
 	text-align: center;
 	height: 100vh;
@@ -1554,7 +1553,7 @@ button:disabled,
 	background: rgba(255, 255, 255, 0.85);
 	padding: 3em;
     position: relative;
-    bottom: -60vh;
+    bottom: -80vh;
 }
 
 #header>.container> :last-child {
