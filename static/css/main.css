@@ -1447,7 +1447,7 @@ button:disabled,
 }
 
 .main .container {
-	padding: 5em 2.5em 8em;
+	padding: 5em 1em 8em;
 	background: rgba(255, 255, 255, .95);
 	box-shadow: inset 0 1px 0 0 #ddd;
 }
