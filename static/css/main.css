@@ -1,6 +1,4 @@
-/* @import url("font-awesome.min.css"); */
-@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css");
-/* @import url("//fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,700;0,800;1,300;1,700;1,800&display=swap"); */
+@import url(//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css);
 
 /*
 	WD Theme is based on the following work:
@@ -10,94 +8,93 @@
 */
 
 /* Reset */
-
-html,
-body,
-div,
-span,
+a,
+abbr,
+acronym,
+address,
 applet,
-object,
-iframe,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
+header,
+hgroup,
+html,
+i,
+iframe,
 img,
 ins,
 kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
 q,
+ruby,
 s,
 samp,
+section,
 small,
+span,
 strike,
 strong,
 sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
 summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
 time,
-mark,
-audio,
+tr,
+tt,
+u,
+ul,
+var,
 video {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+	vertical-align: baseline
 }
 
 article,
@@ -111,53 +108,48 @@ hgroup,
 menu,
 nav,
 section {
-	display: block;
+	display: block
 }
 
 body {
 	font-size: 1em;
 	line-height: 1;
-	text-decoration: none;
-	-webkit-text-size-adjust: none;
+	text-decoration: none
 }
 
 ol,
 ul {
-	list-style: none;
+	list-style: none
 }
 
 blockquote,
 q {
-	quotes: none;
+	quotes: none
 }
 
-blockquote:before,
 blockquote:after,
-q:before,
-q:after {
+blockquote:before,
+q:after,
+q:before {
 	content: '';
-	content: none;
+	content: none
 }
 
 table {
 	border-collapse: collapse;
-	border-spacing: 0;
+	border-spacing: 0
 }
 
 /* Twitter Bootstrap overrides */
 
 body {
-	background: 0 0;
+	background: 0 0
 }
 
-/* Box Model */
-
 *,
-*:before,
-*:after {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+:after,
+:before {
+	box-sizing: border-box
 }
 
 /* Containers */
@@ -165,42 +157,31 @@ body {
 .container {
 	margin-left: auto;
 	margin-right: auto;
+	width: 35em
 }
 
-.container {
-	width: 35em;
-}
-
-@media screen and (max-width: 1680px) {
-
+@media screen and (max-width:1680px) {
 	.container {
-		width: 35em;
+		width: 35em
 	}
-
 }
 
-@media screen and (max-width: 980px) {
-
+@media screen and (max-width:980px) {
 	.container {
-		width: 80%;
+		width: 80%
 	}
-
 }
 
-@media screen and (max-width: 736px) {
-
+@media screen and (max-width:736px) {
 	.container {
-		width: 80%;
+		width: 80%
 	}
-
 }
 
-@media screen and (max-width: 480px) {
-
+@media screen and (max-width:480px) {
 	.container {
-		width: 100%;
+		width: 100%
 	}
-
 }
 
 /* Basic */
@@ -208,57 +189,49 @@ body {
 html {
 	background-color: #313a3d;
 	background-attachment: fixed, fixed;
-	background-image: url("images/overlay.png"), url("images/bg.jpg");
+	background-image: url(images/overlay.png), url(images/bg.jpg);
 	background-position: top left, center center;
 	background-repeat: repeat, no-repeat;
 	background-size: auto, cover;
-	color: #fff;
+	color: #fff
 }
 
 /* Fix background image on Apple devices */
 
-@media (-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio:2),
+(min-resolution:192dpi) {
 
-	html,
-	body {
+	body,
+	html {
 		width: 100%;
 		height: 100%;
 		background-attachment: scroll;
 		background-repeat: repeat;
-		background-size: cover;
+		background-size: cover
 	}
 
 	.main-bg {
 		background-size: cover;
-		width: 100vw;
+		width: 100vw
 	}
 }
 
 html.is-loading body *,
-html.is-loading body *:before,
-html.is-loading body *:after {
-	-moz-animation: none !important;
-	-webkit-animation: none !important;
-	-ms-animation: none !important;
+html.is-loading body :after,
+html.is-loading body :before {
 	animation: none !important;
-	-moz-transition: none !important;
-	-webkit-transition: none !important;
-	-ms-transition: none !important;
-	transition: none !important;
+	transition: none !important
 }
 
 html.is-touch {
 	height: 100vh;
-	overflow: hidden;
+	overflow: hidden
 }
 
 html.is-touch #wrapper {
 	-webkit-backface-visibility: hidden;
-	-webkit-overflow-scrolling: touch;
-	-webkit-transform: translate3d(0, 0, 0);
 	height: 100vh;
-	overflow: auto;
+	overflow: auto
 }
 
 body,
@@ -266,44 +239,39 @@ input,
 select,
 textarea {
 	color: #6f7577;
-	font-family: "Merriweather Sans",
-		"Helvetica",
-		sans-serif;
+	font-family: "Merriweather Sans", Helvetica, sans-serif;
 	font-size: 16pt;
 	font-weight: 300;
-	line-height: 1.75em;
+	line-height: 1.75em
 }
 
 a {
-	-moz-transition: color .2s ease-in-out, border-bottom-color .2s ease-in-out;
-	-webkit-transition: color .2s ease-in-out, border-bottom-color .2s ease-in-out;
-	-ms-transition: color .2s ease-in-out, border-bottom-color .2s ease-in-out;
 	transition: color .2s ease-in-out, border-bottom-color .2s ease-in-out;
 	border-bottom: dotted 1px;
 	color: #007296;
-	text-decoration: none;
+	text-decoration: none
 }
 
 a:hover {
 	border-bottom-color: transparent !important;
 	color: #008fbb !important;
-	text-decoration: none;
+	text-decoration: none
 }
 
-strong,
+.bold,
 b,
-.bold {
+strong {
 	color: #555;
-	font-weight: 700;
+	font-weight: 700
 }
 
 em,
 i {
-	font-style: italic;
+	font-style: italic
 }
 
 p {
-	margin: 0 0 .75em 0;
+	margin: 0 0 .75em 0
 }
 
 h1,
@@ -317,7 +285,7 @@ h6 {
 	letter-spacing: .05em;
 	line-height: 1em;
 	margin: 0 0 1em 0;
-	text-transform: uppercase;
+	text-transform: uppercase
 }
 
 h1 a,
@@ -327,7 +295,7 @@ h4 a,
 h5 a,
 h6 a {
 	color: inherit;
-	text-decoration: none;
+	text-decoration: none
 }
 
 h1,
@@ -336,60 +304,60 @@ h3,
 h4,
 h5,
 h6 {
-	line-height: 150%;
+	line-height: 150%
 }
 
 h1 {
-	font-size: 2.4rem;
+	font-size: 2.4rem
 }
 
 h2 {
-	font-size: 2rem;
+	font-size: 2rem
 }
 
 h3 {
-	font-size: 1.6rem;
+	font-size: 1.6rem
 }
 
 h4 {
-	font-size: 1.4rem;
+	font-size: 1.4rem
 }
 
 h5 {
-	font-size: 1.2rem;
+	font-size: 1.2rem
 }
 
 h6 {
-	font-size: 1.1rem;
+	font-size: 1.1rem
 }
 
 sub {
 	font-size: .8em;
 	position: relative;
-	top: .5em;
+	top: .5em
 }
 
 sup {
 	font-size: .8em;
 	position: relative;
-	top: -0.5em;
+	top: -.5em
 }
 
 hr {
 	border: 0;
 	border-bottom: solid 1px #ddd;
-	margin: 2em 0;
+	margin: 2em 0
 }
 
 hr.major {
-	margin: 3em 0;
+	margin: 3em 0
 }
 
 blockquote {
-	border-left: solid 6px #ddd;
+	border-left: solid 1rem #ddd;
 	font-style: italic;
 	margin: 0 0 2em;
-	padding: .5em 0 .5em 1.5em;
+	padding: .5em 0 .5em 1.5em
 }
 
 code {
@@ -397,74 +365,71 @@ code {
 	font-family: "Courier New", monospace;
 	font-size: .9em;
 	margin: 0 .25em;
-	padding: .25em .65em;
+	padding: .25em .65em
 }
 
 pre {
-	-webkit-overflow-scrolling: touch;
 	font-family: "Courier New", monospace;
 	font-size: .9em;
-	margin: 0 0 2em 0;
+	margin: 0 0 2em 0
 }
 
 pre code {
 	display: block;
 	line-height: 1.75em;
 	padding: 1em 1.5em;
-	overflow-x: auto;
+	overflow-x: auto
 }
 
 .align-left {
-	text-align: left;
+	text-align: left
 }
 
 .align-center {
-	text-align: center;
+	text-align: center
 }
 
 .align-right {
-	text-align: right;
+	text-align: right
 }
-
-/* Loader */
 
 @-moz-keyframes spinner-show {
 	0% {
-		opacity: 0;
+		opacity: 0
 	}
 
 	100% {
-		opacity: 1;
+		opacity: 1
 	}
 }
 
 @-webkit-keyframes spinner-show {
 	0% {
-		opacity: 0;
+		opacity: 0
 	}
 
 	100% {
-		opacity: 1;
+		opacity: 1
 	}
 }
 
 @-ms-keyframes spinner-show {
 	0% {
-		opacity: 0;
+		opacity: 0
 	}
 
 	100% {
-		opacity: 1;
+		opacity: 1
 	}
 }
 
 @keyframes spinner-show {
 	0% {
-		opacity: 0;
+		opacity: 0
 	}
 
 	100% {
-		opacity: 1;
+		opacity: 1
 	}
 }
 
@@ -472,28 +437,19 @@ pre code {
 	0% {
 		color: #454d50;
 		z-index: 10001;
-		-moz-transform: scale(1) rotate(0deg);
-		-webkit-transform: scale(1) rotate(0deg);
-		-ms-transform: scale(1) rotate(0deg);
-		transform: scale(1) rotate(0deg);
+		transform: scale(1) rotate(0)
 	}
 
 	99% {
 		color: #313a3d;
 		z-index: 10001;
-		-moz-transform: scale(0.5) rotate(360deg);
-		-webkit-transform: scale(0.5) rotate(360deg);
-		-ms-transform: scale(0.5) rotate(360deg);
-		transform: scale(0.5) rotate(360deg);
+		transform: scale(.5) rotate(360deg)
 	}
 
 	100% {
 		color: #313a3d;
 		z-index: -1;
-		-moz-transform: scale(0) rotate(360deg);
-		-webkit-transform: scale(0) rotate(360deg);
-		-ms-transform: scale(0) rotate(360deg);
-		transform: scale(0) rotate(360deg);
+		transform: scale(0) rotate(360deg)
 	}
 }
 
@@ -501,28 +457,19 @@ pre code {
 	0% {
 		color: #454d50;
 		z-index: 10001;
-		-moz-transform: scale(1) rotate(0deg);
-		-webkit-transform: scale(1) rotate(0deg);
-		-ms-transform: scale(1) rotate(0deg);
-		transform: scale(1) rotate(0deg);
+		transform: scale(1) rotate(0)
 	}
 
 	99% {
 		color: #313a3d;
 		z-index: 10001;
-		-moz-transform: scale(0.5) rotate(360deg);
-		-webkit-transform: scale(0.5) rotate(360deg);
-		-ms-transform: scale(0.5) rotate(360deg);
-		transform: scale(0.5) rotate(360deg);
+		transform: scale(.5) rotate(360deg)
 	}
 
 	100% {
 		color: #313a3d;
 		z-index: -1;
-		-moz-transform: scale(0) rotate(360deg);
-		-webkit-transform: scale(0) rotate(360deg);
-		-ms-transform: scale(0) rotate(360deg);
-		transform: scale(0) rotate(360deg);
+		transform: scale(0) rotate(360deg)
 	}
 }
 
@@ -530,28 +477,19 @@ pre code {
 	0% {
 		color: #454d50;
 		z-index: 10001;
-		-moz-transform: scale(1) rotate(0deg);
-		-webkit-transform: scale(1) rotate(0deg);
-		-ms-transform: scale(1) rotate(0deg);
-		transform: scale(1) rotate(0deg);
+		transform: scale(1) rotate(0)
 	}
 
 	99% {
 		color: #313a3d;
 		z-index: 10001;
-		-moz-transform: scale(0.5) rotate(360deg);
-		-webkit-transform: scale(0.5) rotate(360deg);
-		-ms-transform: scale(0.5) rotate(360deg);
-		transform: scale(0.5) rotate(360deg);
+		transform: scale(.5) rotate(360deg)
 	}
 
 	100% {
 		color: #313a3d;
 		z-index: -1;
-		-moz-transform: scale(0) rotate(360deg);
-		-webkit-transform: scale(0) rotate(360deg);
-		-ms-transform: scale(0) rotate(360deg);
-		transform: scale(0) rotate(360deg);
+		transform: scale(0) rotate(360deg)
 	}
 }
 
@@ -559,180 +497,147 @@ pre code {
 	0% {
 		color: #454d50;
 		z-index: 10001;
-		-moz-transform: scale(1) rotate(0deg);
-		-webkit-transform: scale(1) rotate(0deg);
-		-ms-transform: scale(1) rotate(0deg);
-		transform: scale(1) rotate(0deg);
+		transform: scale(1) rotate(0)
 	}
 
 	99% {
 		color: #313a3d;
 		z-index: 10001;
-		-moz-transform: scale(0.5) rotate(360deg);
-		-webkit-transform: scale(0.5) rotate(360deg);
-		-ms-transform: scale(0.5) rotate(360deg);
-		transform: scale(0.5) rotate(360deg);
+		transform: scale(.5) rotate(360deg)
 	}
 
 	100% {
 		color: #313a3d;
 		z-index: -1;
-		-moz-transform: scale(0) rotate(360deg);
-		-webkit-transform: scale(0) rotate(360deg);
-		-ms-transform: scale(0) rotate(360deg);
-		transform: scale(0) rotate(360deg);
+		transform: scale(0) rotate(360deg)
 	}
 }
 
 @-moz-keyframes spinner-rotate {
 	0% {
-		-moz-transform: scale(1) rotate(0deg);
-		-webkit-transform: scale(1) rotate(0deg);
-		-ms-transform: scale(1) rotate(0deg);
-		transform: scale(1) rotate(0deg);
+		transform: scale(1) rotate(0)
 	}
 
 	100% {
-		-moz-transform: scale(1) rotate(360deg);
-		-webkit-transform: scale(1) rotate(360deg);
-		-ms-transform: scale(1) rotate(360deg);
-		transform: scale(1) rotate(360deg);
+		transform: scale(1) rotate(360deg)
 	}
 }
 
 @-webkit-keyframes spinner-rotate {
 	0% {
-		-moz-transform: scale(1) rotate(0deg);
-		-webkit-transform: scale(1) rotate(0deg);
-		-ms-transform: scale(1) rotate(0deg);
-		transform: scale(1) rotate(0deg);
+		transform: scale(1) rotate(0)
 	}
 
 	100% {
-		-moz-transform: scale(1) rotate(360deg);
-		-webkit-transform: scale(1) rotate(360deg);
-		-ms-transform: scale(1) rotate(360deg);
-		transform: scale(1) rotate(360deg);
+		transform: scale(1) rotate(360deg)
 	}
 }
 
 @-ms-keyframes spinner-rotate {
 	0% {
-		-moz-transform: scale(1) rotate(0deg);
-		-webkit-transform: scale(1) rotate(0deg);
-		-ms-transform: scale(1) rotate(0deg);
-		transform: scale(1) rotate(0deg);
+		transform: scale(1) rotate(0)
 	}
 
 	100% {
-		-moz-transform: scale(1) rotate(360deg);
-		-webkit-transform: scale(1) rotate(360deg);
-		-ms-transform: scale(1) rotate(360deg);
-		transform: scale(1) rotate(360deg);
+		transform: scale(1) rotate(360deg)
 	}
 }
 
 @keyframes spinner-rotate {
 	0% {
-		-moz-transform: scale(1) rotate(0deg);
-		-webkit-transform: scale(1) rotate(0deg);
-		-ms-transform: scale(1) rotate(0deg);
-		transform: scale(1) rotate(0deg);
+		transform: scale(1) rotate(0)
 	}
 
 	100% {
-		-moz-transform: scale(1) rotate(360deg);
-		-webkit-transform: scale(1) rotate(360deg);
-		-ms-transform: scale(1) rotate(360deg);
-		transform: scale(1) rotate(360deg);
+		transform: scale(1) rotate(360deg)
 	}
 }
 
 @-moz-keyframes overlay-hide {
 	0% {
 		opacity: 1;
-		z-index: 10000;
+		z-index: 10000
 	}
 
 	15% {
 		opacity: 1;
-		z-index: 10000;
+		z-index: 10000
 	}
 
 	99% {
 		opacity: 0;
-		z-index: 10000;
+		z-index: 10000
 	}
 
 	100% {
 		opacity: 0;
-		z-index: -1;
+		z-index: -1
 	}
 }
 
 @-webkit-keyframes overlay-hide {
 	0% {
 		opacity: 1;
-		z-index: 10000;
+		z-index: 10000
 	}
 
 	15% {
 		opacity: 1;
-		z-index: 10000;
+		z-index: 10000
 	}
 
 	99% {
 		opacity: 0;
-		z-index: 10000;
+		z-index: 10000
 	}
 
 	100% {
 		opacity: 0;
-		z-index: -1;
+		z-index: -1
 	}
 }
 
 @-ms-keyframes overlay-hide {
 	0% {
 		opacity: 1;
-		z-index: 10000;
+		z-index: 10000
 	}
 
 	15% {
 		opacity: 1;
-		z-index: 10000;
+		z-index: 10000
 	}
 
 	99% {
 		opacity: 0;
-		z-index: 10000;
+		z-index: 10000
 	}
 
 	100% {
 		opacity: 0;
-		z-index: -1;
+		z-index: -1
 	}
 }
 
 @keyframes overlay-hide {
 	0% {
 		opacity: 1;
-		z-index: 10000;
+		z-index: 10000
 	}
 
 	15% {
 		opacity: 1;
-		z-index: 10000;
+		z-index: 10000
 	}
 
 	99% {
 		opacity: 0;
-		z-index: 10000;
+		z-index: 10000
 	}
 
 	100% {
 		opacity: 0;
-		z-index: -1;
+		z-index: -1
 	}
 }
 
@@ -742,17 +647,11 @@ body:before {
 	font-family: "Font Awesome 5 Free";
 	font-style: normal;
 	font-weight: 300;
-	text-transform: none !important;
+	text-transform: none !important
 }
 
 body:before {
-	-moz-animation: spinner-show 1.5s 1 .25s ease forwards, spinner-hide .25s ease-in-out forwards !important;
-	-webkit-animation: spinner-show 1.5s 1 .25s ease forwards, spinner-hide .25s ease-in-out forwards !important;
-	-ms-animation: spinner-show 1.5s 1 .25s ease forwards, spinner-hide .25s ease-in-out forwards !important;
 	animation: spinner-show 1.5s 1 .25s ease forwards, spinner-hide .25s ease-in-out forwards !important;
-	-moz-transform-origin: 50% 50%;
-	-webkit-transform-origin: 50% 50%;
-	-ms-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
 	color: #454d50;
 	content: '\f1ce';
@@ -768,13 +667,10 @@ body:before {
 	text-align: center;
 	top: 50%;
 	width: 2em;
-	z-index: -1;
+	z-index: -1
 }
 
 body:after {
-	-moz-animation: overlay-hide 1s ease-in forwards !important;
-	-webkit-animation: overlay-hide 1s ease-in forwards !important;
-	-ms-animation: overlay-hide 1s ease-in forwards !important;
 	animation: overlay-hide 1s ease-in forwards !important;
 	background: #313a3d;
 	content: '';
@@ -785,68 +681,60 @@ body:after {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: -1;
+	z-index: -1
 }
 
 html.is-loading body:before {
-	-moz-animation: spinner-show 1.5s 1 .25s ease forwards, spinner-rotate .75s infinite linear !important;
-	-webkit-animation: spinner-show 1.5s 1 .25s ease forwards, spinner-rotate .75s infinite linear !important;
-	-ms-animation: spinner-show 1.5s 1 .25s ease forwards, spinner-rotate .75s infinite linear !important;
 	animation: spinner-show 1.5s 1 .25s ease forwards, spinner-rotate .75s infinite linear !important;
-	z-index: 10001;
+	z-index: 10001
 }
 
 html.is-loading body:after {
-	-moz-animation: none !important;
-	-webkit-animation: none !important;
-	-ms-animation: none !important;
 	animation: none !important;
 	opacity: 1;
-	z-index: 10000;
+	z-index: 10000
 }
 
-@media (-webkit-min-device-pixel-ratio: 2) {
-
+@media (-webkit-min-device-pixel-ratio:2) {
 	body:before {
-		line-height: 2.025em;
+		line-height: 2.025em
 	}
-
 }
 
 /* Section/Article */
 
-section.special,
-article.special {
-	text-align: center;
+article.special,
+section.special {
+	text-align: center
 }
 
 header p {
 	color: #a8b0b3;
 	letter-spacing: .05em;
-	text-transform: uppercase;
+	text-transform: uppercase
 }
 
 header h1+p {
-	margin-top: -1em;
+	margin-top: -1em
 }
 
 header h2+p {
-	margin-top: -1em;
+	margin-top: -1em
 }
 
 header h3+p {
-	margin-top: -0.8em;
+	margin-top: -.8em
 }
 
 header h4+p,
 header h5+p,
 header h6+p {
 	font-size: .8em;
-	margin-top: -0.6em;
+	margin-top: -.6em
 }
 
 header.major {
-	text-align: center;
+	text-align: center
 }
 
 header.major h1,
@@ -855,7 +743,7 @@ header.major h3,
 header.major h4,
 header.major h5,
 header.major h6 {
-	position: relative;
+	position: relative
 }
 
 header.major h1:after,
@@ -871,11 +759,11 @@ header.major h6:after {
 	margin: .75em auto 0;
 	position: relative;
 	width: 4em;
-	border-radius: 1px;
+	border-radius: 1px
 }
 
 header.major p {
-	margin-top: 0;
+	margin-top: 0
 }
 
 /* Form */
@@ -885,7 +773,7 @@ label {
 	display: block;
 	font-size: .9em;
 	font-weight: 700;
-	margin: 1em 0 0;
+	margin: 1em 0 0
 }
 
 /* Box */
@@ -893,19 +781,19 @@ label {
 .box {
 	border: solid 2px #ddd;
 	margin-bottom: 2em;
-	padding: 1.5em;
+	padding: 1.5em
 }
 
-.box> :last-child,
-.box> :last-child> :last-child,
-.box> :last-child> :last-child> :last-child {
-	margin-bottom: 0;
+.box>:last-child,
+.box>:last-child>:last-child,
+.box>:last-child>:last-child>:last-child {
+	margin-bottom: 0
 }
 
 .box.alt {
 	border: 0;
 	border-radius: 0;
-	padding: 0;
+	padding: 0
 }
 
 /* Icon */
@@ -913,25 +801,25 @@ label {
 .icon {
 	text-decoration: none;
 	border-bottom: none;
-	position: relative;
+	position: relative
 }
 
 .icon:before {
 	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased
 }
 
 .icon>.label {
-	display: none;
+	display: none
 }
 
 .icon.major {
 	display: block;
-	margin: 0 0 1em;
+	margin: 0 0 1em
 }
 
 .icon.major:before {
-	font-size: 2.5em;
+	font-size: 2.5em
 }
 
 /* Image */
@@ -939,54 +827,54 @@ label {
 .image {
 	border: 0;
 	display: inline-block;
-	position: relative;
+	position: relative
 }
 
 .image:before {
-	background: url("images/overlay.png");
+	background: url(images/overlay.png);
 	content: '';
 	display: block;
 	height: 100%;
 	left: 0;
 	position: absolute;
 	top: 0;
-	width: 100%;
+	width: 100%
 }
 
 .image img {
-	display: block;
+	display: block
 }
 
 .image.left {
 	float: left;
 	margin: 0 1.5em 1em 0;
-	top: .25em;
+	top: .25em
 }
 
 .image.right {
 	float: right;
 	margin: 0 0 1em 1.5em;
-	top: .25em;
+	top: .25em
 }
 
 .image.left,
 .image.right {
-	max-width: 40%;
+	max-width: 40%
 }
 
 .image.left img,
 .image.right img {
-	width: 100%;
+	width: 100%
 }
 
 .image.fit {
 	display: block;
 	margin: 0 0 2em;
-	width: 100%;
+	width: 100%
 }
 
 .image.fit img {
-	width: 100%;
+	width: 100%
 }
 
 /* List */
@@ -994,136 +882,135 @@ label {
 ol {
 	list-style: decimal;
 	margin: 0 0 2em;
-	padding-left: 1.25em;
+	padding-left: 1.25em
 }
 
 ol li {
-	padding-left: .25em;
+	padding-left: .25em
 }
 
 ul {
 	list-style: disc;
 	margin: 0 0 2em;
-	padding-left: 1em;
+	padding-left: 1em
 }
 
 ul li {
-	padding-left: .5em;
+	padding-left: .5em
 }
 
 ul.alt {
 	list-style: none;
-	padding-left: 0;
+	padding-left: 0
 }
 
 ul.alt li {
 	border-top: solid 1px #ddd;
-	padding: .5em 0;
+	padding: .5em 0
 }
 
 ul.alt li:first-child {
 	border-top: 0;
-	padding-top: 0;
+	padding-top: 0
 }
 
 ul.icons {
 	cursor: default;
 	list-style: none;
-	padding-left: 0;
+	padding-left: 0
 }
 
 ul.icons li {
 	display: inline-block;
-	padding: 0 1.5em 0 0;
+	padding: 0 1.5em 0 0
 }
 
 ul.icons li:last-child {
-	padding-right: 0;
+	padding-right: 0
 }
 
 ul.icons li .icon:before {
-	font-size: 1.5em;
+	font-size: 1.5em
 }
 
 ul.icons-grid {
 	text-align: center;
 	list-style: none;
 	padding: 0;
-	position: relative;
+	position: relative
 }
 
 ul.icons-grid li {
 	display: block;
 	float: left;
 	padding: 3em 0;
-	width: 50%;
+	width: 50%
 }
 
 ul.icons-grid li h3 {
 	font-size: 1rem;
-	margin: 0;
-
+	margin: 0
 }
 
-ul.icons-grid li:nth-child(2n + 1) {
-	box-shadow: inset -1px 0 0 0 #ddd, 1px 0 0 0 #ddd;
+ul.icons-grid li:nth-child(2n+1) {
+	box-shadow: inset -1px 0 0 0 #ddd, 1px 0 0 0 #ddd
 }
 
-ul.icons-grid li:nth-child(2n + 3):before {
+ul.icons-grid li:nth-child(2n+3):before {
 	background: #ddd;
 	content: '';
 	display: block;
 	height: 2px;
 	margin-top: -3em;
 	position: absolute;
-	width: 100%;
+	width: 100%
 }
 
 ul.icons-grid:after {
 	clear: both;
 	content: '';
-	display: block;
+	display: block
 }
 
 ul.actions {
 	cursor: default;
 	list-style: none;
-	padding-left: 0;
+	padding-left: 0
 }
 
 ul.actions li {
 	display: inline-block;
 	padding: 0 1em 0 0;
-	vertical-align: middle;
+	vertical-align: middle
 }
 
 ul.actions li:last-child {
-	padding-right: 0;
+	padding-right: 0
 }
 
 ul.actions.small li {
-	padding: 0 .5em 0 0;
+	padding: 0 .5em 0 0
 }
 
 ul.actions.vertical li {
 	display: block;
-	padding: 1em 0 0 0;
+	padding: 1em 0 0 0
 }
 
 ul.actions.vertical li:first-child {
-	padding-top: 0;
+	padding-top: 0
 }
 
 ul.actions.vertical li>* {
-	margin-bottom: 0;
+	margin-bottom: 0
 }
 
 ul.actions.vertical.small li {
-	padding: .5em 0 0;
+	padding: .5em 0 0
 }
 
 ul.actions.vertical.small li:first-child {
-	padding-top: 0;
+	padding-top: 0
 }
 
 ul.actions.fit {
@@ -1131,56 +1018,55 @@ ul.actions.fit {
 	margin-left: -1em;
 	padding: 0;
 	table-layout: fixed;
-	width: calc(100% + 1em);
+	width: calc(100% + 1em)
 }
 
 ul.actions.fit li {
 	display: table-cell;
-	padding: 0 0 0 1em;
+	padding: 0 0 0 1em
 }
 
 ul.actions.fit li>* {
 	margin-bottom: 0;
-	min-width: 0;
+	min-width: 0
 }
 
 ul.actions.fit.small {
-	margin-left: -0.5em;
-	width: calc(100% + .5em);
+	margin-left: -.5em;
+	width: calc(100% + .5em)
 }
 
 ul.actions.fit.small li {
-	padding: 0 0 0 .5em;
+	padding: 0 0 0 .5em
 }
 
 dl {
-	margin: 0 0 2em;
+	margin: 0 0 2em
 }
 
 /* Table */
 
 .table-wrapper {
-	-webkit-overflow-scrolling: touch;
-	overflow-x: auto;
+	overflow-x: auto
 }
 
 table {
 	margin: 0 0 2em;
-	width: 100%;
+	width: 100%
 }
 
 table tbody tr {
 	border: solid 1px #ddd;
 	border-left: 0;
-	border-right: 0;
+	border-right: 0
 }
 
-table tbody tr:nth-child(2n + 1) {
-	background-color: rgba(144, 144, 144, .075);
+table tbody tr:nth-child(2n+1) {
+	background-color: rgba(144, 144, 144, .075)
 }
 
 table td {
-	padding: .75em .75em;
+	padding: .75em .75em
 }
 
 table th {
@@ -1188,57 +1074,49 @@ table th {
 	font-size: .9em;
 	font-weight: 700;
 	padding: 0 .75em .75em .75em;
-	text-align: left;
+	text-align: left
 }
 
 table thead {
-	border-bottom: solid 2px #ddd;
+	border-bottom: solid 2px #ddd
 }
 
 table tfoot {
-	border-top: solid 2px #ddd;
+	border-top: solid 2px #ddd
 }
 
 table.alt {
-	border-collapse: separate;
+	border-collapse: separate
 }
 
 table.alt tbody tr td {
 	border: solid 1px #ddd;
 	border-left-width: 0;
-	border-top-width: 0;
+	border-top-width: 0
 }
 
 table.alt tbody tr td:first-child {
-	border-left-width: 1px;
+	border-left-width: 1px
 }
 
 table.alt tbody tr:first-child td {
-	border-top-width: 1px;
+	border-top-width: 1px
 }
 
 table.alt thead {
-	border-bottom: 0;
+	border-bottom: 0
 }
 
 table.alt tfoot {
-	border-top: 0;
+	border-top: 0
 }
 
-/* Button */
-
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
+.button,
 button,
-.button {
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	-ms-appearance: none;
+input[type=button],
+input[type=reset],
+input[type=submit] {
 	appearance: none;
-	-moz-transition: background-color .2s ease-in-out, color .2s ease-in-out;
-	-webkit-transition: background-color .2s ease-in-out, color .2s ease-in-out;
-	-ms-transition: background-color .2s ease-in-out, color .2s ease-in-out;
 	transition: background-color .2s ease-in-out, color .2s ease-in-out;
 	background-color: transparent;
 	border-radius: .5em;
@@ -1254,130 +1132,130 @@ button,
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
-	white-space: nowrap;
+	white-space: nowrap
 }
 
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover,
+.button:hover,
 button:hover,
-.button:hover {
+input[type=button]:hover,
+input[type=reset]:hover,
+input[type=submit]:hover {
 	background-color: rgba(144, 144, 144, .075);
-	color: #555 !important;
+	color: #555 !important
 }
 
-input[type="submit"]:active,
-input[type="reset"]:active,
-input[type="button"]:active,
+.button:active,
 button:active,
-.button:active {
+input[type=button]:active,
+input[type=reset]:active,
+input[type=submit]:active {
 	background-color: rgba(144, 144, 144, .15);
-	color: #555 !important;
+	color: #555 !important
 }
 
-input[type="submit"].icon,
-input[type="reset"].icon,
-input[type="button"].icon,
+.button.icon,
 button.icon,
-.button.icon {
-	padding-left: 1.35em;
+input[type=button].icon,
+input[type=reset].icon,
+input[type=submit].icon {
+	padding-left: 1.35em
 }
 
-input[type="submit"].icon:before,
-input[type="reset"].icon:before,
-input[type="button"].icon:before,
+.button.icon:before,
 button.icon:before,
-.button.icon:before {
+input[type=button].icon:before,
+input[type=reset].icon:before,
+input[type=submit].icon:before {
 	color: #a8b0b3;
-	margin-right: .5em;
+	margin-right: .5em
 }
 
-input[type="submit"].fit,
-input[type="reset"].fit,
-input[type="button"].fit,
+.button.fit,
 button.fit,
-.button.fit {
+input[type=button].fit,
+input[type=reset].fit,
+input[type=submit].fit {
 	display: block;
 	margin: 0 0 1em 0;
-	width: 100%;
+	width: 100%
 }
 
-input[type="submit"].small,
-input[type="reset"].small,
-input[type="button"].small,
+.button.small,
 button.small,
-.button.small {
-	font-size: .8em;
+input[type=button].small,
+input[type=reset].small,
+input[type=submit].small {
+	font-size: .8em
 }
 
-input[type="submit"].big,
-input[type="reset"].big,
-input[type="button"].big,
+.button.big,
 button.big,
-.button.big {
-	font-size: 1.35em;
+input[type=button].big,
+input[type=reset].big,
+input[type=submit].big {
+	font-size: 1.35em
 }
 
-input[type="submit"].special,
-input[type="reset"].special,
-input[type="button"].special,
+.button.special,
 button.special,
-.button.special {
+input[type=button].special,
+input[type=reset].special,
+input[type=submit].special {
 	background-color: #007296;
 	border: 0;
 	box-shadow: none;
 	color: #fff !important;
 	padding: 1.75em 2em;
-	line-height: .1em;
+	line-height: .1em
 }
 
-input[type="submit"].special:hover,
-input[type="reset"].special:hover,
-input[type="button"].special:hover,
+.button.special:hover,
 button.special:hover,
-.button.special:hover {
-	background-color: #008fbb;
+input[type=button].special:hover,
+input[type=reset].special:hover,
+input[type=submit].special:hover {
+	background-color: #008fbb
 }
 
-input[type="submit"].special:active,
-input[type="reset"].special:active,
-input[type="button"].special:active,
+.button.special:active,
 button.special:active,
-.button.special:active {
-	background-color: #00abe1;
+input[type=button].special:active,
+input[type=reset].special:active,
+input[type=submit].special:active {
+	background-color: #00abe1
 }
 
-input[type="submit"].special.icon:before,
-input[type="reset"].special.icon:before,
-input[type="button"].special.icon:before,
+.button.special.icon:before,
 button.special.icon:before,
-.button.special.icon:before {
-	color: #d1ecdc;
+input[type=button].special.icon:before,
+input[type=reset].special.icon:before,
+input[type=submit].special.icon:before {
+	color: #d1ecdc
 }
 
-input[type="submit"].disabled,
-input[type="submit"]:disabled,
-input[type="reset"].disabled,
-input[type="reset"]:disabled,
-input[type="button"].disabled,
-input[type="button"]:disabled,
+.button.disabled,
+.button:disabled,
 button.disabled,
 button:disabled,
-.button.disabled,
-.button:disabled {
+input[type=button].disabled,
+input[type=button]:disabled,
+input[type=reset].disabled,
+input[type=reset]:disabled,
+input[type=submit].disabled,
+input[type=submit]:disabled {
 	background-color: #6f7577 !important;
 	box-shadow: none !important;
 	color: #fff !important;
 	cursor: default;
-	opacity: .25;
+	opacity: .25
 }
 
 .shadow-effect {
-	position: relative;
+	position: relative
 }
 
-.shadow-effect:before,
-.shadow-effect:after {
+.shadow-effect:after,
+.shadow-effect:before {
 	z-index: -1;
 	position: absolute;
 	content: "";
@@ -1387,36 +1265,23 @@ button:disabled,
 	top: 80%;
 	max-width: 300px;
 	background: #777;
-	-webkit-box-shadow: 0 15px 10px #777;
-	-moz-box-shadow: 0 15px 10px #777;
 	box-shadow: 0 15px 10px #777;
-	-webkit-transform: rotate(-3deg);
-	-moz-transform: rotate(-3deg);
-	-o-transform: rotate(-3deg);
-	-ms-transform: rotate(-3deg);
-	transform: rotate(-3deg);
+	transform: rotate(-3deg)
 }
 
 .shadow-effect:after {
-	-webkit-transform: rotate(3deg);
-	-moz-transform: rotate(3deg);
-	-o-transform: rotate(3deg);
-	-ms-transform: rotate(3deg);
 	transform: rotate(3deg);
 	right: 10px;
-	left: auto;
+	left: auto
 }
 
 .add-arrow-after::after {
-	content: " ↓";
+	content: " ↓"
 }
 
 /* Main BG */
 
 .main-bg {
-	-moz-transition: opacity .5s ease-out;
-	-webkit-transition: opacity .5s ease-out;
-	-ms-transition: opacity .5s ease-out;
 	transition: opacity .5s ease-out;
 	background-attachment: fixed, fixed;
 	background-position: top left, center center;
@@ -1428,36 +1293,35 @@ button:disabled,
 	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: -1;
+	z-index: -1
 }
 
 .main-bg.active {
 	opacity: 1;
-	background-attachment: scroll;
+	background-attachment: scroll
 }
 
 /* Main */
 
 .main {
-	position: relative;
+	position: relative
 }
 
 .main .image.primary {
-	display: none;
+	display: none
 }
 
 .main .container {
-	padding: 5em 1em 8em;
+	padding: 5em 1.5em 8em;
 	background: rgba(255, 255, 255, .95);
-	box-shadow: inset 0 1px 0 0 #ddd;
+	box-shadow: inset 0 1px 0 0 #ddd
 }
 
 .main .container:before {
-	/* min-height: calc(100vh - 13em); */
 	content: '';
 	display: inline-block;
 	vertical-align: middle;
-	width: 1px;
+	width: 1px
 }
 
 .main .container .content {
@@ -1465,16 +1329,13 @@ button:disabled,
 	text-align: left;
 	margin-right: 1px;
 	vertical-align: middle;
-	width: calc(100% - 2rem);
+	width: calc(100% - 2rem)
 }
 
 .main .goto-next {
-	-moz-transition: background-color .2s ease-in-out;
-	-webkit-transition: background-color .2s ease-in-out;
-	-ms-transition: background-color .2s ease-in-out;
 	transition: background-color .2s ease-in-out;
 	background-color: rgba(144, 144, 144, .075);
-	background-image: url("images/arrow.svg");
+	background-image: url(images/arrow.svg);
 	background-position: center center;
 	background-repeat: no-repeat;
 	border-radius: 100%;
@@ -1489,85 +1350,86 @@ button:disabled,
 	position: absolute;
 	text-indent: 4em;
 	white-space: nowrap;
-	width: 4em;
+	width: 4em
 }
 
 .main .goto-next:hover {
-	background-color: rgba(144, 144, 144, .15);
+	background-color: rgba(144, 144, 144, .15)
 }
-
-/* Header */
 
 #header {
 	margin: 20vh 0 -1.75em;
 	position: relative;
 	text-align: center;
 	height: 100%;
-	width: 100%;
+	width: 100%
 }
 
 #header:after {
 	content: '';
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: middle
 }
 
 #header>header {
 	color: rgba(255, 255, 255, .5);
 	display: inline-block;
 	vertical-align: middle;
-	height: 60vh;
+	height: 60vh
 }
 
+#header>header b,
 #header>header h1,
 #header>header h2,
 #header>header h3,
 #header>header h4,
 #header>header h5,
 #header>header h6,
-#header>header strong,
-#header>header b {
-	color: #fff;
+#header>header strong {
+	color: #fff
 }
 
 #header>header a {
-	color: inherit;
+	color: inherit
 }
 
 #header>header a:hover {
-	color: #fff !important;
+	color: #fff !important
 }
 
 #header>header h1 {
 	font-size: 3em;
 	line-height: 1.25em;
 	margin: 0;
-	text-shadow: .1em .1em .2em #555;
+	text-shadow: .1em .1em .2em #555
 }
 
 #header>header h1:after {
-	margin-top: .5em;
+	margin-top: .5em
 }
 
 #header>header p {
 	color: #fff;
 	font-weight: 700;
-	margin: 1.5em 0 0 0;
+	margin: 1.5em 0 0 0
 }
 
 #header>.container {
+	align-items: center;
+	justify-content: center;
 	background: rgba(255, 255, 255, .85);
+	border-radius: 1rem 1rem 0 0;
+	display: flex;
 	height: 20vh;
-	padding: 2.5em;
-	position: relative;
+	position: relative
 }
 
-#header>.container> :last-child {
-	margin-bottom: 0;
+#header>.container>:last-child {
+	margin-bottom: 0
 }
 
 #header>.container .button {
-	min-width: 12em;
+	min-width: 12em
 }
 
 /* Footer */
@@ -1576,13 +1438,14 @@ button:disabled,
 	min-height: 100vh;
 	padding: 0 0 12em;
 	position: relative;
-	text-align: center;
+	text-align: center
 }
 
 #footer .container {
 	padding: 5em 2.5em 3em;
 	background: rgba(255, 255, 255, .95);
 	box-shadow: inset 0 1px 0 0 #ddd;
+	border-radius: 0 0 1rem 1rem
 }
 
 #footer>footer {
@@ -1591,57 +1454,57 @@ button:disabled,
 	left: 0;
 	position: absolute;
 	text-align: center;
-	width: 100%;
+	width: 100%
 }
 
+#footer>footer b,
 #footer>footer h1,
 #footer>footer h2,
 #footer>footer h3,
 #footer>footer h4,
 #footer>footer h5,
 #footer>footer h6,
-#footer>footer strong,
-#footer>footer b {
-	color: #fff;
+#footer>footer strong {
+	color: #fff
 }
 
 #footer>footer a {
-	color: inherit;
+	color: inherit
 }
 
 #footer>footer a:hover {
-	color: #fff !important;
+	color: #fff !important
 }
 
 #footer>footer>.copyright {
 	text-shadow: .1em .1em .2em #555;
 	font-size: .8em;
 	line-height: 1em;
-	padding: 0;
+	padding: 0
 }
 
 #footer>footer>.copyright li {
 	border-left: solid 1px rgba(255, 255, 255, .2);
 	display: inline-block;
 	margin: 0 0 0 1em;
-	padding: 0 0 0 1em;
+	padding: 0 0 0 1em
 }
 
 #footer>footer>.copyright li:first-child {
 	border-left: 0;
 	margin-left: 0;
-	padding-left: 0;
+	padding-left: 0
 }
 
 a.scrolly>h1,
 a.scrolly>h2,
 a.scrolly>h3 {
-	color: #007296;
+	color: #007296
 }
 
 /* Large */
 
-@media screen and (max-width: 1680px) {
+@media screen and (max-width:1680px) {
 
 	/* Basic */
 
@@ -1649,174 +1512,160 @@ a.scrolly>h3 {
 	input,
 	select,
 	textarea {
-		font-size: 1rem;
+		font-size: 1rem
 	}
-
 }
 
 /* Medium */
 
-@media screen and (max-width: 980px) {
-
+@media screen and (max-width:980px) {
 	/* Main BG */
 
 	.main-bg {
-		display: none;
+		display: none
 	}
 
 	/* Main */
 
 	.main .image.primary {
 		display: block;
-		margin: 0 0 4em;
+		margin: 0 0 4em
 	}
 
 	.main .container {
-		padding: 3em 3em 8em;
+		padding: 3em 3em 8em
 	}
 
 	.main .container:before {
-		display: none;
+		display: none
 	}
-
-	/* Header */
 
 	#header>header {
 		margin: auto 10%;
-		width: 80%;
+		width: 80%
 	}
-
-	/* Footer */
 
 	#footer {
 		min-height: 0;
-		padding: 0;
+		padding: 0
 	}
 
 	#footer .container {
-		padding: 3em 3em 1em 3em;
+		padding: 3em 3em 1em 3em
 	}
 
 	#footer>footer {
 		padding: 3em 3em 1em 3em;
 		bottom: auto;
-		position: relative;
+		position: relative
 	}
-
 }
 
-/* Small */
-
-@media screen and (max-width: 736px) {
-
+@media screen and (max-width:736px) {
 	/* Basic */
 
 	h2 {
-		font-size: 1.35em;
+		font-size: 1.35em
 	}
 
 	#header>.container {
-		padding: 0;
+		padding: 0
 	}
 
-	#header>.container> :last-child {
-		margin-bottom: 10vh;
+	#header>.container>:last-child {
+		margin-bottom: 10vh
 	}
 
 	/* Main */
 
 	.main .container {
-		padding: 3em 1.5em 1em;
+		padding: 3em 1.5em 1em
 	}
 
 	.main .container .image.primary:first-child {
-		margin: -1.5em 0 2.5em;
+		margin: -1.5em 0 2.5em
 	}
 
 	.main .goto-next {
-		display: none;
+		display: none
 	}
 
 	/* Header */
 
 	#header {
-		height: 90vh;
+		height: 90vh
 	}
 
 	#header:after {
-		height: 70vh;
+		height: 70vh
 	}
 
 	#header>header {
-		padding-bottom: 0;
+		padding-bottom: 0
 	}
 
 	#header>header h1 {
-		font-size: 2em;
+		font-size: 2em
 	}
 
 	#header>header p {
-		margin-top: 1em;
+		margin-top: 1em
 	}
 
 	#header>.container {
-		background: none;
+		background: 0 0;
 		color: #fff;
 		margin: auto;
-		width: 100vw;
+		width: 100vw
 	}
 
 	#header .actions a {
-		color: inherit;
+		color: inherit
 	}
 
 	/* Footer */
 
 	#footer .container {
-		padding: 3em 1.5em 1em;
+		padding: 3em 1.5em 1em
 	}
-
 }
 
-/* XSmall */
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width:480px) {
 
 	/* Basic */
-
-	html,
-	body {
-		min-width: 320px;
+	body,
+	html {
+		min-width: 320px
 	}
 
 	/* List */
 
 	ul.actions {
-		margin: 0 0 2em;
+		margin: 0 0 2em
 	}
 
 	ul.actions li {
 		display: block;
 		padding: 1em 0 0;
 		text-align: center;
-		width: 100%;
+		width: 100%
 	}
 
 	ul.actions li:first-child {
-		padding-top: 0;
+		padding-top: 0
 	}
 
 	ul.actions li>* {
 		margin: 0 !important;
-		width: 100%;
+		width: 100%
 	}
 
 	ul.actions.small li {
-		padding: .5em 0 0;
+		padding: .5em 0 0
 	}
 
 	ul.actions.small li:first-child {
-		padding-top: 0;
+		padding-top: 0
 	}
 
 	ul.icons-grid li {
@@ -1824,66 +1673,64 @@ a.scrolly>h3 {
 		float: none;
 		margin: 2em 0 0;
 		padding: 2em 0 0;
-		width: 100%;
+		width: 100%
 	}
 
 	ul.icons-grid li:first-child {
 		box-shadow: none !important;
 		margin-top: 0;
-		padding: 1em 0 0;
+		padding: 1em 0 0
 	}
 
-	ul.icons-grid li:nth-child(2n + 1) {
-		box-shadow: none;
+	ul.icons-grid li:nth-child(2n+1) {
+		box-shadow: none
 	}
 
-	ul.icons-grid li:nth-child(2n + 3):before {
-		display: none;
+	ul.icons-grid li:nth-child(2n+3):before {
+		display: none
 	}
 
 	/* Button */
 
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
 	button,
-	.button {
-		padding: 0;
+	input[type=button],
+	input[type=reset],
+	input[type=submit] {
+		padding: 0
 	}
 
-	input[type="submit"].icon,
-	input[type="reset"].icon,
-	input[type="button"].icon,
+	.button.icon,
 	button.icon,
-	.button.icon {
-		padding-left: 0;
+	input[type=button].icon,
+	input[type=reset].icon,
+	input[type=submit].icon {
+		padding-left: 0
 	}
 
 	/* Main */
 
 	.main .container {
-		padding: 3em 1em 1em;
+		padding: 3em 1em 1em
 	}
 
 	.main .container .image.primary:first-child {
-		margin: -2em 0 2.5em;
+		margin: -2em 0 2.5em
 	}
 
 	/* Footer */
 
 	#footer .container {
-		padding: 3em 1em 1em;
+		padding: 3em 1em 1em
 	}
 
 	#footer>footer>.copyright {
-		line-height: inherit;
+		line-height: inherit
 	}
 
 	#footer>footer>.copyright li {
 		border-left: 0;
 		display: block;
 		margin: 0;
-		padding: 0;
+		padding: 0
 	}
-
 }
