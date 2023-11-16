@@ -4,7 +4,7 @@
 		wastlund.net
 		Free for personal and commercial use under the CCA 3.0 license
 {{ "-->" | safeHTML }}
-<html lang="sv-se">
+<html lang="{{ if .Site.Language.Lang }}{{ .Site.Language.Lang }}{{ else }}{{ .Site.Params.defaultContentLanguage }}{{ end }}">
 
 <head>
 	{{ partial "head.html" . }}

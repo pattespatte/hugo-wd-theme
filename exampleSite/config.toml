@@ -2,168 +2,185 @@
 baseurl = "https://www.example.com"
 languageCode = "en-us"
 theme = "hugo-wd-theme"
-title = "Highlights"
+# title = "Highlights"
+
+[languages]
+[languages.en]
+	languageCode = "en-us"
+	title = 'Highlights'
+	description = "This is the page description"
+	languageName = 'English'
+	weight = 1
+[languages.sv]
+	languageCode = "sv-se"
+	title = 'Ljustglimtar'
+	description = "Det här är sidans titel"
+	languageName = 'Swedish'
+	weight = 2
 
 # Enter your tracking code to enable Google analytics
 googleAnalytics = ""
 
 [params]
 
-  # You can use Markdown for urls [text](//domain.tld/source)
-  #
-  # All icons using Fontawesom's icon font. Look at fortawesome.github.io/Font-Awesome/icons/
-  # for more icons.
+	# You can use Markdown for urls [text](//domain.tld/source)
+	#
+	# All icons using Fontawesom's icon font. Look at fortawesome.github.io/Font-Awesome/icons/
+	# for more icons.
 
-  # To provide more meta data for search engings feel free to add a few informations.
-  # This lines will be inserted as meta tags.
-  name = "Your Name"
-  description = "Your Description"
+	# To provide more meta data for search engings feel free to add a few informations.
+	# This lines will be inserted as meta tags.
+	name = "Your Name"
+	description = "Your Description"
 
-  # For a static site it's not possible to provide a contact form. The contact form uses
-  # Simple Form as a proxy. The form makes a Post request to their servers to send an email
-  #
-  # How to setup Simple Form
-  #
-  # - create an api at getsimpleform.com
-  # - add your api under 'form_api' below
-  # - upload the generated site to your server
-  # - send a dummy email to yourself to confirm that you recieve the form data
-  # - That's all. Enjoy mailing!
-  form_api = ""
+	# For a static site it's not possible to provide a contact form. The contact form uses
+	# Simple Form as a proxy. The form makes a Post request to their servers to send an email
+	#
+	# How to setup Simple Form
+	#
+	# - create an api at getsimpleform.com
+	# - add your api under 'form_api' below
+	# - upload the generated site to your server
+	# - send a dummy email to yourself to confirm that you recieve the form data
+	# - That's all. Enjoy mailing!
+	form_api = ""
 
-  # If this param is set to true, every section gets an own background image (located at static/images).
-  # To change the image you could use the param picture on every section.
-  # If it's disabled you could change the background to overwrite the bg.jpg and overlay.png to set the background.
-  backgroundpersection = true
+	# If this param is set to true, every section gets an own background image (located at static/images).
+	# To change the image you could use the param picture on every section.
+	# If it's disabled you could change the background to overwrite the bg.jpg and overlay.png to set the background.
+	backgroundpersection = true
 
-  # If you wish to use responsive images, that is the image parameter 'srcset', please set the following parameter to 'true'.
-  # If you turn on responsive images by setting 'srcset' to true you need 3 sizes of each image. Theses images can be created with the attached script - `static/images/resize-images-wd-theme.sh`.
-  # For normal images, just use image name like pic01.jpg and for responsive images you will use the first part of the filename (like 'pic01') and the images created by the script will be used accordingly.
-  # In this example the filenames would be: pic01-480w.jpg, pic01-736w.jpg, pic01-980w.jpg but you would still just put 'picture = pic01' below.
-  image_srcset = false
+	# If you wish to use responsive images, that is the image parameter 'srcset', please set the following parameter to 'true'.
+	# If you turn on responsive images by setting 'srcset' to true you need 3 sizes of each image. Theses images can be created with the attached script - `static/images/resize-images-wd-theme.sh`.
+	# For normal images, just use image name like pic01.jpg and for responsive images you will use the first part of the filename (like 'pic01') and the images created by the script will be used accordingly.
+	# In this example the filenames would be: pic01-480w.jpg, pic01-736w.jpg, pic01-980w.jpg but you would still just put 'picture = pic01' below.
+	image_srcset = false
 
-  # hero Section
-  [params.hero]
-    type = "hero"
-    title = "Highlights"
-    description = "a fun litte { responsive } single Pager by [HTML5UP](//html5up.net)"
-    buttontext = "begin"
+# hero Section
+# You can use your language on params like this: {{ .Param "hero.title" }}
+# If you want to use a different language than the default one, you can use the following syntax:
+# [languages.en.params.hero]
+[params.hero]
+	type = "hero"
+	title = "Highlights"
+	description = "a fun litte { responsive } single Pager by [HTML5UP](//html5up.net)"
+	buttontext = "begin"
 
-  # about section
-  [[params.block]]
-    id = "about"
-    type = "text"
-    title = "Who am I"
-    description = "Aliquam ante ac id. Adipiscing interdum lorem praesent fusce pellentesque arcu feugiat. Consequat sed ultricies rutrum. Sed adipiscing eu amet interdum lorem blandit vis ac commodo aliquet integer vulputate phasellus lorem ipsum dolor lorem magna consequat sed etiam adipiscing interdum."
-    buttontext = "next"
-    # the picture is stored at static/images/
-    picture = "pic01.jpg"
+# about section
+[[params.block]]
+	id = "about"
+	type = "text"
+	title = "Who am I"
+	description = "Aliquam ante ac id. Adipiscing interdum lorem praesent fusce pellentesque arcu feugiat. Consequat sed ultricies rutrum. Sed adipiscing eu amet interdum lorem blandit vis ac commodo aliquet integer vulputate phasellus lorem ipsum dolor lorem magna consequat sed etiam adipiscing interdum."
+	buttontext = "next"
+	# the picture is stored at static/images/
+	picture = "pic01.jpg"
 
-  # skill section
-  [[params.block]]
-    id = "skills"
-    type = "list"
-    title = "Stuff I do"
-    description = "Consequat sed ultricies rutrum. Sed adipiscing eu amet interdum lorem blandit vis ac commodo aliquet vulputate."
-    buttontext = "next"
-    # the picture is stored at static/images/
-    picture = "pic02.jpg"
+# skill section
+[[params.block]]
+	id = "skills"
+	type = "list"
+	title = "Stuff I do"
+	description = "Consequat sed ultricies rutrum. Sed adipiscing eu amet interdum lorem blandit vis ac commodo aliquet vulputate."
+	buttontext = "next"
+	# the picture is stored at static/images/
+	picture = "pic02.jpg"
 
-    [[params.block.item]]
-      icontype = "fas"
-      icon = "fa-camera-retro"
-      title = "Magna Etiam"
+[[params.block.item]]
+	icontype = "fas"
+	icon = "fa-camera-retro"
+	title = "Magna Etiam"
 
-    [[params.block.item]]
-      icontype = "fas"
-      icon = "fa-pencil-alt"
-      title = "Lorem Ipsum"
+[[params.block.item]]
+	icontype = "fas"
+	icon = "fa-pencil-alt"
+	title = "Lorem Ipsum"
 
-    [[params.block.item]]
-      icontype = "fas"
-      icon = "fa-code"
-      title = "Nulla Tempus"
+[[params.block.item]]
+	icontype = "fas"
+	icon = "fa-code"
+	title = "Nulla Tempus"
 
-    [[params.block.item]]
-      icontype = "fas"
-      icon = "fa-coffee"
-      title = "Sed Feugiat"
+[[params.block.item]]
+	icontype = "fas"
+	icon = "fa-coffee"
+	title = "Sed Feugiat"
 
-  # infos section
-  [[params.block]]
-    id = "infos"
-    type = "text"
-    title = "One more thing"
-    description = "Aliquam ante ac id. Adipiscing interdum lorem praesent fusce pellentesque arcu feugiat. Consequat sed ultricies rutrum. Sed adipiscing eu amet interdum lorem blandit vis ac commodo aliquet integer vulputate phasellus lorem ipsum dolor lorem magna consequat sed etiam adipiscing interdum."
-    # the picture is stored at static/images/
-    picture = "pic03.jpg"
+# infos section
+[[params.block]]
+	id = "infos"
+	type = "text"
+	title = "One more thing"
+	description = "Aliquam ante ac id. Adipiscing interdum lorem praesent fusce pellentesque arcu feugiat. Consequat sed ultricies rutrum. Sed adipiscing eu amet interdum lorem blandit vis ac commodo aliquet integer vulputate phasellus lorem ipsum dolor lorem magna consequat sed etiam adipiscing interdum."
+	# the picture is stored at static/images/
+	picture = "pic03.jpg"
 
-#  # custom section
-#  [[params.block]]
-#    id = "important"
-#    # to make custom section copy <theme>/layouts/partials/text.html to /layouts/partials/custom.html and edit it according to your needs.
-#    type = "custom"
-#    title = "Don't forget"
-#    description = "Curabitur massa ante, semper at massa et, semper pellentesque velit. Duis tempor est nisi, a gravida risus malesuada eget. Nunc rutrum arcu laoreet mauris sodales vehicula. Nunc iaculis felis ac dui egestas, vel ullamcorper tellus bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacinia sem porttitor, fringilla metus at, convallis quam. Integer convallis a justo non pellentesque."
-#    # the picture is stored at static/images/
-#    picture = "pic04.jpg"
+	# # custom section
+	# [[params.block]]
+	#   id = "important"
+	#   # to make custom section copy <theme>/layouts/partials/text.html to /layouts/partials/custom.html and edit it according to your needs.
+	#   type = "custom"
+	#   title = "Don't forget"
+	#   description = "Curabitur massa ante, semper at massa et, semper pellentesque velit. Duis tempor est nisi, a gravida risus malesuada eget. Nunc rutrum arcu laoreet mauris sodales vehicula. Nunc iaculis felis ac dui egestas, vel ullamcorper tellus bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacinia sem porttitor, fringilla metus at, convallis quam. Integer convallis a justo non pellentesque."
+	#   # the picture is stored at static/images/
+	#   picture = "pic04.jpg"
 
-  # contact form
-  [[params.block]]
-    id = "contact"
-    type = "contact"
-    title = "Get in Touch"
-    picture = "pic05.jpg"
+# contact form
+[[params.block]]
+	id = "contact"
+	type = "contact"
+	title = "Get in Touch"
+	picture = "pic05.jpg"
 
-    [params.block.form]
-      name = "Name"
-      email = "Your Email"
-      message = "Your Message"
-      buttontext = "send message"
+[params.block.form]
+	name = "Name"
+	email = "Your Email"
+	message = "Your Message"
+	buttontext = "send message"
 
-  # footer section
-  # this section includes last block and social icons
+	# footer section
+	# this section includes last block and social icons
 
-  [params.footer]
-    enable = true
+[params.footer]
+	enable = true
 
-    # social icons
-    [params.footer.social_list]
-      enable = true
+# social icons
+[params.footer.social_list]
+	enable = true
 
-      [[params.footer.social]]
-        title = "Twitter"
-        icon = "fa-twitter"
-        link = "#"
+[[params.footer.social]]
+	title = "Twitter"
+	icon = "fa-twitter"
+	link = "#"
 
-      [[params.footer.social]]
-        title = "Facebook"
-        icon = "fa-facebook"
-        link = "#"
+[[params.footer.social]]
+	title = "Facebook"
+	icon = "fa-facebook"
+	link = "#"
 
-      [[params.footer.social]]
-        title = "Instagramm"
-        icon = "fa-instagram"
-        link = "#"
+[[params.footer.social]]
+	title = "Instagramm"
+	icon = "fa-instagram"
+	link = "#"
 
-      [[params.footer.social]]
-        title = "Dribbble"
-        icon = "fa-dribbble"
-        link = "#"
+[[params.footer.social]]
+	title = "Dribbble"
+	icon = "fa-dribbble"
+	link = "#"
 
-      [[params.footer.social]]
-        title = "Email"
-        icon = "fa-envelope"
-        link = "#"
+[[params.footer.social]]
+	title = "Email"
+	icon = "fa-envelope"
+	link = "#"
 
-    # copyright
-    #[params.footer.copyright.notice]
+	# copyright
+	#[params.footer.copyright.notice]
 
-      [[params.footer.copyright.notice]]
-        text = "© Untitled"
+[[params.footer.copyright.notice]]
+	text = "© Untitled"
 
-      [[params.footer.copyright.notice]]
-        text = "Design: [HTML5UP](//html5up.net)"
+[[params.footer.copyright.notice]]
+	text = "Design: [HTML5UP](//html5up.net)"
 
-      [[params.footer.copyright.notice]]
-        text = "Demo Images: [Unsplash](//unsplash.com/)"
+[[params.footer.copyright.notice]]
+	text = "Demo Images: [Unsplash](//unsplash.com/)"
