@@ -240,7 +240,7 @@ select,
 textarea {
 	color: #6f7577;
 	font-family: "Merriweather Sans", Helvetica, sans-serif;
-	font-size: 16pt;
+	font-size: 1em;
 	font-weight: 300;
 	line-height: 1.75em
 }
@@ -1652,7 +1652,7 @@ a.scrolly>h3 {
 	}
 
 	ul.actions li:first-child {
-		padding-top: 0
+		padding: 0 2rem
 	}
 
 	ul.actions li>* {
@@ -1665,7 +1665,7 @@ a.scrolly>h3 {
 	}
 
 	ul.actions.small li:first-child {
-		padding-top: 0
+		padding: 0 2rem
 	}
 
 	ul.icons-grid li {
